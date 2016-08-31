@@ -1,0 +1,44 @@
+h1{background-color: #000; color: #FFF; padding: 10px 15px;}
+
+body{margin:0}
+
+.wrap{max-width: 1140px; width: 100%; margin: 0 auto; display: table;}
+
+.titulo{background-color: #555; padding: 25px 0;
+	h1{display: table; margin: 0 auto;}
+}
+
+.meno{margin: 20px auto; display: table; background-color: #000; width: 100%;
+	ul{display: table; width: 100%;
+		li{list-style: none; float: left; text-align: center; width: 15%; margin: 0 2%;
+			a{background-color: #FFF; color: #000; text-decoration: none; display: block; padding: 10px 0;}
+		}
+	}
+}
+
+.conteudo{float: left; width: 60%;
+	article{
+		>div{width: 100%;
+			img{width: 100%; height: 400px; display: block;}
+		}
+		>div:last-child{background-color: #DDD;
+			p{margin: 10px 15px; padding-bottom: 10px;}
+		}		
+	}
+}
+
+aside{float: right; width: 35%;
+	article{height: 300px; background-color: #EEE;}
+}
+
+footer{background-color: #555; padding: 20px 0;
+	.wrap{
+		p{color: #FFF;}
+		>div:first-child{width: 100%;
+			>div{width: 30%; float: left; ;
+				h1{background-color: #555;}
+			}
+			& div:nth-child(2){margin: 0 5%;}
+		}
+	}
+}

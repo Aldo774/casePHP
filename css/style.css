@@ -1,0 +1,80 @@
+h1 {
+  background-color: #000;
+  color: #FFF;
+  padding: 10px 15px; }
+
+body {
+  margin: 0; }
+
+.wrap {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+  display: table; }
+
+.titulo {
+  background-color: #555;
+  padding: 25px 0; }
+  .titulo h1 {
+    display: table;
+    margin: 0 auto; }
+
+.meno {
+  margin: 20px auto;
+  display: table;
+  background-color: #000;
+  width: 100%; }
+  .meno ul {
+    display: table;
+    width: 100%; }
+    .meno ul li {
+      list-style: none;
+      float: left;
+      text-align: center;
+      width: 15%;
+      margin: 0 2%; }
+      .meno ul li a {
+        background-color: #FFF;
+        color: #000;
+        text-decoration: none;
+        display: block;
+        padding: 10px 0; }
+
+.conteudo {
+  float: left;
+  width: 60%; }
+  .conteudo article > div {
+    width: 100%; }
+    .conteudo article > div img {
+      width: 100%;
+      height: 400px;
+      display: block; }
+  .conteudo article > div:last-child {
+    background-color: #DDD; }
+    .conteudo article > div:last-child p {
+      margin: 10px 15px;
+      padding-bottom: 10px; }
+
+aside {
+  float: right;
+  width: 35%; }
+  aside article {
+    height: 300px;
+    background-color: #EEE; }
+
+footer {
+  background-color: #555;
+  padding: 20px 0; }
+  footer .wrap p {
+    color: #FFF; }
+  footer .wrap > div:first-child {
+    width: 100%; }
+    footer .wrap > div:first-child > div {
+      width: 30%;
+      float: left; }
+      footer .wrap > div:first-child > div h1 {
+        background-color: #555; }
+    footer .wrap > div:first-child div:nth-child(2) {
+      margin: 0 5%; }
+
+/*# sourceMappingURL=style.css.map */
