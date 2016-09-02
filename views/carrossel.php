@@ -9,8 +9,9 @@ $limite = '3,5';
 
 	$consulta = "Select 
 		thumb, 
-		titulo
-		from tb_publicacao 
+		titulo,
+		id
+		from tb_publicacao
 		LIMIT $limite";
 
 	$publicacoes = mysqli_query($conexao, $consulta) or die(mysql_error());
@@ -22,9 +23,13 @@ $limite = '3,5';
 		while($res_publicacoes = mysqli_fetch_array($publicacoes)){
 			$thumb = $res_publicacoes[0];
 			$titulo = utf8_encode($res_publicacoes[1]);
+			$id = $res_publicacoes[2];
 ?>
-
-            <li class="item"><img src="<?php echo $path; echo $thumb;?>" alt="<?php echo $titulo;?>" title="<?php echo $titulo;?>"/><h1><?php echo $titulo;?></h1></li>
+			<a href="single.php?topico=<?php echo $id;?>">
+	            <li class="item"><img src="<?php echo $path; echo $thumb;?>" alt="<?php echo $titulo;?>" title="<?php echo $titulo;?>"/>
+	            	<h1><?php echo $titulo;?></h1>
+	            </li>
+	        </a>
 
 <?php
 	}
