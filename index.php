@@ -35,6 +35,12 @@
 				</ul>
 			</nav>
 			<aside>
+				<div>
+					<form name="pesquisa" action="pesquisa.php" method="GET">
+						<input type="text" name="busca">
+						<input type="submit" value="">
+					</form>
+				</div>
 				<article>
 					<h1>Sobre</h1>
 				</article>

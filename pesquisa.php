@@ -58,7 +58,7 @@
 			<section class="conteudo">
 				<?php
 
-				$topico = $_GET['topico'];
+				$busca = $_GET['busca'];
 
 				$consulta = "SELECT
 						thumb,
@@ -69,13 +69,13 @@
 						autor,
 						visitas
 						FROM tb_publicacao
-						where id = '$topico'";
+						where titulo LIKE '%$busca%'";
 
 				$noticias = mysqli_query($conexao, $consulta)
 						or die(mysqli_error());
 				if(@mysqli_num_rows($noticias) <= '0'){
 
-					echo "Publicação Inexistente";
+					echo "<h1>Busca sem Resultados</h1>";
 				}else{
 
 					$path = "uploads/publicacoes/imagens/";
@@ -100,17 +100,13 @@
 						<img src="<?php echo $path; echo $thumb;?>">
 					</div>
 					<div>
-						<h1><?php echo $titulo;?></h1>
+						<a href="single.php?topico=<?php echo $id;?>"><h1><?php echo $titulo;?></h1></a>
 						<p><?php echo $texto; echo $visitas;?></p>
 					</div>
 				</article>
 
 			<?php
 				}
-
-				$up_visitas = $visitas + 1;
-				$add_visitas = mysqli_query($conexao, "UPDATE tb_publicacao SET visitas = '$up_visitas' WHERE id = '$topico'")
-				or die(mysqli_error(""));
 			}
 			?>
 			</section>
