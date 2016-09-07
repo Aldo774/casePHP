@@ -1,6 +1,10 @@
+@font-face {
+  font-family: OpenSans;
+  src: url("fonts/OpenSans-Light.ttf"); }
 h1 {
   background-color: #000;
   color: #FFF;
+  font-family: 'OpenSans';
   padding: 10px 15px; }
 
 body {
@@ -153,13 +157,26 @@ footer {
   width: 100%;
   min-height: 100%; }
 
+@keyframes menu {
+  0% {
+    width: 0; }
+  100% {
+    width: 100%; } }
 .sideAdmin {
   float: left;
-  width: 30%;
+  width: 25%;
   background-color: transparent;
   display: table; }
-  .sideAdmin h1 {
-    margin: 0; }
+  .sideAdmin > div:first-child {
+    background-color: #000; }
+    .sideAdmin > div:first-child img {
+      margin: 0 auto;
+      padding: 15px;
+      display: block; }
+    .sideAdmin > div:first-child h1 {
+      margin: 0;
+      background-color: #111;
+      font-size: 16px; }
   .sideAdmin > ul {
     padding: 0;
     margin: 0; }
@@ -167,13 +184,13 @@ footer {
       list-style: none;
       width: 100%;
       color: #FFF; }
-      .sideAdmin > ul > li > h2 {
-        font-size: 18px;
-        font-family: Arial Sans-serif;
+      .sideAdmin > ul > li > span {
+        font-size: 14px;
+        font-family: 'OpenSans';
         margin: 0;
-        background-color: #000066;
+        background-color: #303030;
         display: block;
-        padding: 10px 5%; }
+        padding: 6px 5%; }
       .sideAdmin > ul > li ul {
         padding: 0;
         margin: 0; }
@@ -181,18 +198,140 @@ footer {
           list-style: none;
           width: 100%;
           color: #FFF; }
-          .sideAdmin > ul > li ul > li > h3 {
-            font-size: 16px;
-            font-family: Arial Sans-serif;
-            margin: 0;
-            display: block;
-            padding: 10px 10%; }
+          .sideAdmin > ul > li ul > li > div:first-child {
+            font-size: 13px;
+            font-family: 'OpenSans';
+            background-color: #404040;
+            margin: 2px 0;
+            cursor: pointer;
+            width: 100%; }
+            .sideAdmin > ul > li ul > li > div:first-child p {
+              margin: 0;
+              padding: 6px 10%;
+              z-index: 2;
+              position: relative; }
+            .sideAdmin > ul > li ul > li > div:first-child > div {
+              width: 100%;
+              position: relative;
+              z-index: 1;
+              transition: 1s; }
+        .sideAdmin > ul > li ul > li:hover > div div {
+          animation-name: menu;
+          animation-duration: 1s; }
+    .sideAdmin > ul > li:nth-child(5n+1) ul > li:hover:nth-child(7n+1) > div div {
+      background-color: #000099; }
+    .sideAdmin > ul > li:nth-child(5n+1) ul > li:hover:nth-child(7n+2) > div div {
+      background-color: #0000EF; }
+    .sideAdmin > ul > li:nth-child(5n+1) ul > li:hover:nth-child(7n+3) > div div {
+      background-color: #3333FF; }
+    .sideAdmin > ul > li:nth-child(5n+1) ul > li:hover:nth-child(7n+4) > div div {
+      background-color: #6666FF; }
+    .sideAdmin > ul > li:nth-child(5n+1) ul > li:hover:nth-child(7n+5) > div div {
+      background-color: #3333FF; }
+    .sideAdmin > ul > li:nth-child(5n+1) ul > li:hover:nth-child(7n+6) > div div {
+      background-color: #0000EF; }
+    .sideAdmin > ul > li:nth-child(5n+1) ul > li:hover:nth-child(7n+7) > div div {
+      background-color: #000099; }
+    .sideAdmin > ul > li:nth-child(5n+2) ul > li:hover:nth-child(7n+1) > div div {
+      background-color: #590099; }
+    .sideAdmin > ul > li:nth-child(5n+2) ul > li:hover:nth-child(7n+2) > div div {
+      background-color: #8600E6; }
+    .sideAdmin > ul > li:nth-child(5n+2) ul > li:hover:nth-child(7n+3) > div div {
+      background-color: #AA33FF; }
+    .sideAdmin > ul > li:nth-child(5n+2) ul > li:hover:nth-child(7n+4) > div div {
+      background-color: #CA80FF; }
+    .sideAdmin > ul > li:nth-child(5n+2) ul > li:hover:nth-child(7n+5) > div div {
+      background-color: #AA33FF; }
+    .sideAdmin > ul > li:nth-child(5n+2) ul > li:hover:nth-child(7n+6) > div div {
+      background-color: #8600E6; }
+    .sideAdmin > ul > li:nth-child(5n+2) ul > li:hover:nth-child(7n+7) > div div {
+      background-color: #590099; }
+    .sideAdmin > ul > li:nth-child(5n+3) ul > li:hover:nth-child(7n+1) > div div {
+      background-color: #006666; }
+    .sideAdmin > ul > li:nth-child(5n+3) ul > li:hover:nth-child(7n+2) > div div {
+      background-color: #009999; }
+    .sideAdmin > ul > li:nth-child(5n+3) ul > li:hover:nth-child(7n+3) > div div {
+      background-color: #00CCCC; }
+    .sideAdmin > ul > li:nth-child(5n+3) ul > li:hover:nth-child(7n+4) > div div {
+      background-color: #00FFFF; }
+    .sideAdmin > ul > li:nth-child(5n+3) ul > li:hover:nth-child(7n+5) > div div {
+      background-color: #00CCCC; }
+    .sideAdmin > ul > li:nth-child(5n+3) ul > li:hover:nth-child(7n+6) > div div {
+      background-color: #009999; }
+    .sideAdmin > ul > li:nth-child(5n+3) ul > li:hover:nth-child(7n+7) > div div {
+      background-color: #006666; }
+    .sideAdmin > ul > li:nth-child(5n+4) ul > li:hover:nth-child(7n+1) > div div {
+      background-color: #003300; }
+    .sideAdmin > ul > li:nth-child(5n+4) ul > li:hover:nth-child(7n+2) > div div {
+      background-color: #004D00; }
+    .sideAdmin > ul > li:nth-child(5n+4) ul > li:hover:nth-child(7n+3) > div div {
+      background-color: #006600; }
+    .sideAdmin > ul > li:nth-child(5n+4) ul > li:hover:nth-child(7n+4) > div div {
+      background-color: #008800; }
+    .sideAdmin > ul > li:nth-child(5n+4) ul > li:hover:nth-child(7n+5) > div div {
+      background-color: #006600; }
+    .sideAdmin > ul > li:nth-child(5n+4) ul > li:hover:nth-child(7n+6) > div div {
+      background-color: #004D00; }
+    .sideAdmin > ul > li:nth-child(5n+4) ul > li:hover:nth-child(7n+7) > div div {
+      background-color: #003300; }
+    .sideAdmin > ul > li:nth-child(5n+5) ul > li:hover:nth-child(7n+1) > div div {
+      background-color: #994D00; }
+    .sideAdmin > ul > li:nth-child(5n+5) ul > li:hover:nth-child(7n+2) > div div {
+      background-color: #B35900; }
+    .sideAdmin > ul > li:nth-child(5n+5) ul > li:hover:nth-child(7n+3) > div div {
+      background-color: #CC6600; }
+    .sideAdmin > ul > li:nth-child(5n+5) ul > li:hover:nth-child(7n+4) > div div {
+      background-color: #E67300; }
+    .sideAdmin > ul > li:nth-child(5n+5) ul > li:hover:nth-child(7n+5) > div div {
+      background-color: #CC6600; }
+    .sideAdmin > ul > li:nth-child(5n+5) ul > li:hover:nth-child(7n+6) > div div {
+      background-color: #B35900; }
+    .sideAdmin > ul > li:nth-child(5n+5) ul > li:hover:nth-child(7n+7) > div div {
+      background-color: #994D00; }
+    .sideAdmin > ul > li:nth-child(7n+6) ul > li:hover:nth-child(7n+1) > div div {
+      background-color: #590099; }
+    .sideAdmin > ul > li:nth-child(7n+6) ul > li:hover:nth-child(7n+2) > div div {
+      background-color: #8600E6; }
+    .sideAdmin > ul > li:nth-child(7n+6) ul > li:hover:nth-child(7n+3) > div div {
+      background-color: #AA33FF; }
+    .sideAdmin > ul > li:nth-child(7n+6) ul > li:hover:nth-child(7n+4) > div div {
+      background-color: #CA80FF; }
+    .sideAdmin > ul > li:nth-child(7n+6) ul > li:hover:nth-child(7n+5) > div div {
+      background-color: #AA33FF; }
+    .sideAdmin > ul > li:nth-child(7n+6) ul > li:hover:nth-child(7n+6) > div div {
+      background-color: #8600E6; }
+    .sideAdmin > ul > li:nth-child(7n+6) ul > li:hover:nth-child(7n+7) > div div {
+      background-color: #590099; }
+    .sideAdmin > ul > li:nth-child(7n+7) ul > li:hover:nth-child(7n+1) > div div {
+      background-color: #000099; }
+    .sideAdmin > ul > li:nth-child(7n+7) ul > li:hover:nth-child(7n+2) > div div {
+      background-color: #0000EF; }
+    .sideAdmin > ul > li:nth-child(7n+7) ul > li:hover:nth-child(7n+3) > div div {
+      background-color: #3333FF; }
+    .sideAdmin > ul > li:nth-child(7n+7) ul > li:hover:nth-child(7n+4) > div div {
+      background-color: #6666FF; }
+    .sideAdmin > ul > li:nth-child(7n+7) ul > li:hover:nth-child(7n+5) > div div {
+      background-color: #3333FF; }
+    .sideAdmin > ul > li:nth-child(7n+7) ul > li:hover:nth-child(7n+6) > div div {
+      background-color: #0000EF; }
+    .sideAdmin > ul > li:nth-child(7n+7) ul > li:hover:nth-child(7n+7) > div div {
+      background-color: #000099; }
 
 .contentAdmin {
-  background-color: #FFF;
-  width: 70%;
-  float: left;
-  height: 100%;
-  display: table; }
+  width: 75%;
+  float: right;
+  height: 800px;
+  display: table;
+  background-color: #FFF; }
+  .contentAdmin h1 {
+    background-color: #ddd;
+    padding: 63px 20px;
+    color: #111; }
+  .contentAdmin > section {
+    margin: 10px 1%;
+    padding: 10px 2%;
+    background-color: #FFF;
+    width: 94%;
+    height: 500px; }
 
 /*# sourceMappingURL=style.css.map */

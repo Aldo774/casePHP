@@ -14,37 +14,82 @@
     <body>
         <div class="Admin">
             <aside class="sideAdmin">
-                <h1>Painel</h1>
+                <div>
+                    <img src="img/settings.png">
+                    <h1>Painel</h1>
+                </div>
                 <ul>
-                    <li><h2>Gerenciar Posts</h2>
+                    <li><span>Gerenciar Posts</span>
                         <ul>
-                            <li><h3>Cadastrar Novo</h3></li>
-                            <li><h3>Listar Posts</h3></li>
+                            <li>
+                                <div>
+                                    <p>Cadastrar Post</p>
+                                    <div></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <p>Listar Post</p>
+                                    <div></div>
+                                </div>
+                            </li>
                         </ul>
                     </li>
-                    <li><h2>Gerenciar Páginas</h2>
+                    <li><span>Gerenciar Páginas</span>
                         <ul>
-                            <li><h3>Cadastrar Nova</h3></li>
-                            <li><h3>Listar Paginas</h3></li>
+                            <li>
+                                <div>
+                                    <p>Cadastrar Nova</p>
+                                    <div></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <p>Listar Paginas</p>
+                                    <div></div>
+                                </div>
+                            </li>
                         </ul>
                     </li>
-                    <li><h2>Cadastrar Usuário</h2>
+                    <li><span>Cadastrar Usuário</span>
                         <ul>
-                            <li><h3>Cadastrar Novo</h3></li>
-                            <li><h3>Listar Usuários</h3></li>
+                            <li>
+                                <div>
+                                    <p>Cadastrar Novo</p>
+                                    <div></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <p>Listar Usuários</p>
+                                    <div></div>
+                                </div>
+                            </li>
                         </ul>
                     </li>
-                    <li><h2>Sistema</h2>
+                    <li><span>Sistema</span>
                         <ul>
-                            <li><h3>Visualizar o Site</h3></li>
-                            <li><h3>Logoff</h3></li>
+                            <li>
+                                <div>
+                                    <p>Visualizar o Site</p>
+                                    <div></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <p>Logoff</p>
+                                    <div></div>
+                                </div>
+                            </li>
                         </ul>
                     </li>
                 </ul>
             </aside>
             <section class="contentAdmin">
                 <h1>Página restrita</h1>
-                <p>Olá, <?php echo $_SESSION['UsuarioNome']; ?>!</p>
+                <section>
+                    <p>Olá, <?php echo $_SESSION['UsuarioNome']; ?>!</p>
+                </section>
             </section>
         </div>
     </body>
