@@ -91,7 +91,7 @@ footer{background-color: #555; padding: 20px 0;
 			ul{padding: 0; margin: 0;
 				>li{list-style: none; width: 100%; color: #FFF;
 					>div:first-child{font-size: 13px; font-family: 'OpenSans'; background-color: #404040; margin: 2px 0; cursor: pointer; width: 100%;
-						p{margin: 0; padding: 6px 10%; z-index: 2; position: relative;}
+						a{margin: 0; display: block; padding: 6px 10%; z-index: 2; position: relative; text-decoration: none; color: #FFF; font-size: 13px; font-family: 'OpenSans';}
 						>div{width: 100%; position: relative; z-index: 1; transition: 1s}
 					}
 				}
@@ -302,90 +302,19 @@ footer{background-color: #555; padding: 20px 0;
 				}
 			}
 		}
+	}
+}
 
-		& >li:nth-child(7n+6){
-			ul{
-				>li:hover:nth-child(7n+1){
-					>div{
-						div{background-color: #590099;}
-					}	
-				}
-				& >li:hover:nth-child(7n+2){
-					>div{
-						div{background-color: #8600E6;}
-					}
-				}
-				& >li:hover:nth-child(7n+3){
-					>div{
-						div{background-color: #AA33FF;}
-					}
-				}
-				& >li:hover:nth-child(7n+4){
-					>div{
-						div{background-color: #CA80FF;}
-					}
-				}
-				& >li:hover:nth-child(7n+5){
-					>div{
-						div{background-color: #AA33FF;}
-					}
-				}
-				& >li:hover:nth-child(7n+6){
-					>div{
-						div{background-color: #8600E6;}
-					}
-				}
-				& >li:hover:nth-child(7n+7){
-					>div{
-						div{background-color: #590099;}
-					}
-				}				
-			}
-		}
-
-		& >li:nth-child(7n+7){
-			ul{
-				& >li:hover:nth-child(7n+1){
-					>div{
-						div{background-color: #000099;}
-					}
-				}
-				& >li:hover:nth-child(7n+2){
-					>div{
-						div{background-color: #0000EF;}
-					}
-				}
-				& >li:hover:nth-child(7n+3){
-					>div{
-						div{background-color: #3333FF;}
-					}
-				}
-				& >li:hover:nth-child(7n+4){
-					>div{
-						div{background-color: #6666FF;}
-					}
-				}
-				& >li:hover:nth-child(7n+5){
-					>div{
-						div{background-color: #3333FF;}
-					}
-				}
-				& >li:hover:nth-child(7n+6){
-					>div{
-						div{background-color: #0000EF;}
-					}
-				}
-				& >li:hover:nth-child(7n+7){
-					>div{
-						div{background-color: #000099;}
-					}
-				}
-			}
-		}
+.formLogin{background-color: #AAA;
+	form{display: table; position: relative; top: 15%; margin: 0 auto; width: 320px; background-color: #777; font-family: 'OpenSans'; color: #FFF; border-radius: 5px;
+		legend{background-color: #555; width: 90%; font-size: 20px; font-weight: bold; padding: 10px 5%; text-align: center; margin: 0 0 15px; border-radius: 5px;}
+		label{width: 100%; text-align: center; padding: 5px 0; display: block;}
+		input[type="text"], input[type="password"]{width: 80%; margin: 0 auto; display: block; padding: 5px 5%; background-color: #333; color: #FFF; border: none; font-family: 'OpenSans'}
+		input[type="submit"]{width: 80%; margin: 0 auto; display: block; background-color: #222; padding: 10px 0; font-family: 'OpenSans'; border: none; margin: 35px auto; color: #FFF;} 
 	}
 }
 
 .contentAdmin{width: 75%; float: right; height: 800px; display: table; background-color: #FFF;
-	h1{background-color: #ddd; padding: 63px 20px; color: #111;}
+	h1{background-color: #ddd; padding: 63px 20px; color: #111; border-bottom: 5px solid #333;}
 	>section{margin: 10px 1%; padding: 10px 2%; background-color: #FFF; width: 94%; height: 500px;}
 }

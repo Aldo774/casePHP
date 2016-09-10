@@ -205,11 +205,16 @@ footer {
             margin: 2px 0;
             cursor: pointer;
             width: 100%; }
-            .sideAdmin > ul > li ul > li > div:first-child p {
+            .sideAdmin > ul > li ul > li > div:first-child a {
               margin: 0;
+              display: block;
               padding: 6px 10%;
               z-index: 2;
-              position: relative; }
+              position: relative;
+              text-decoration: none;
+              color: #FFF;
+              font-size: 13px;
+              font-family: 'OpenSans'; }
             .sideAdmin > ul > li ul > li > div:first-child > div {
               width: 100%;
               position: relative;
@@ -288,34 +293,52 @@ footer {
       background-color: #B35900; }
     .sideAdmin > ul > li:nth-child(5n+5) ul > li:hover:nth-child(7n+7) > div div {
       background-color: #994D00; }
-    .sideAdmin > ul > li:nth-child(7n+6) ul > li:hover:nth-child(7n+1) > div div {
-      background-color: #590099; }
-    .sideAdmin > ul > li:nth-child(7n+6) ul > li:hover:nth-child(7n+2) > div div {
-      background-color: #8600E6; }
-    .sideAdmin > ul > li:nth-child(7n+6) ul > li:hover:nth-child(7n+3) > div div {
-      background-color: #AA33FF; }
-    .sideAdmin > ul > li:nth-child(7n+6) ul > li:hover:nth-child(7n+4) > div div {
-      background-color: #CA80FF; }
-    .sideAdmin > ul > li:nth-child(7n+6) ul > li:hover:nth-child(7n+5) > div div {
-      background-color: #AA33FF; }
-    .sideAdmin > ul > li:nth-child(7n+6) ul > li:hover:nth-child(7n+6) > div div {
-      background-color: #8600E6; }
-    .sideAdmin > ul > li:nth-child(7n+6) ul > li:hover:nth-child(7n+7) > div div {
-      background-color: #590099; }
-    .sideAdmin > ul > li:nth-child(7n+7) ul > li:hover:nth-child(7n+1) > div div {
-      background-color: #000099; }
-    .sideAdmin > ul > li:nth-child(7n+7) ul > li:hover:nth-child(7n+2) > div div {
-      background-color: #0000EF; }
-    .sideAdmin > ul > li:nth-child(7n+7) ul > li:hover:nth-child(7n+3) > div div {
-      background-color: #3333FF; }
-    .sideAdmin > ul > li:nth-child(7n+7) ul > li:hover:nth-child(7n+4) > div div {
-      background-color: #6666FF; }
-    .sideAdmin > ul > li:nth-child(7n+7) ul > li:hover:nth-child(7n+5) > div div {
-      background-color: #3333FF; }
-    .sideAdmin > ul > li:nth-child(7n+7) ul > li:hover:nth-child(7n+6) > div div {
-      background-color: #0000EF; }
-    .sideAdmin > ul > li:nth-child(7n+7) ul > li:hover:nth-child(7n+7) > div div {
-      background-color: #000099; }
+
+.formLogin {
+  background-color: #AAA; }
+  .formLogin form {
+    display: table;
+    position: relative;
+    top: 15%;
+    margin: 0 auto;
+    width: 320px;
+    background-color: #777;
+    font-family: 'OpenSans';
+    color: #FFF;
+    border-radius: 5px; }
+    .formLogin form legend {
+      background-color: #555;
+      width: 90%;
+      font-size: 20px;
+      font-weight: bold;
+      padding: 10px 5%;
+      text-align: center;
+      margin: 0 0 15px;
+      border-radius: 5px; }
+    .formLogin form label {
+      width: 100%;
+      text-align: center;
+      padding: 5px 0;
+      display: block; }
+    .formLogin form input[type="text"], .formLogin form input[type="password"] {
+      width: 80%;
+      margin: 0 auto;
+      display: block;
+      padding: 5px 5%;
+      background-color: #333;
+      color: #FFF;
+      border: none;
+      font-family: 'OpenSans'; }
+    .formLogin form input[type="submit"] {
+      width: 80%;
+      margin: 0 auto;
+      display: block;
+      background-color: #222;
+      padding: 10px 0;
+      font-family: 'OpenSans';
+      border: none;
+      margin: 35px auto;
+      color: #FFF; }
 
 .contentAdmin {
   width: 75%;
@@ -326,7 +349,8 @@ footer {
   .contentAdmin h1 {
     background-color: #ddd;
     padding: 63px 20px;
-    color: #111; }
+    color: #111;
+    border-bottom: 5px solid #333; }
   .contentAdmin > section {
     margin: 10px 1%;
     padding: 10px 2%;

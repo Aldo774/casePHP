@@ -23,13 +23,13 @@
                         <ul>
                             <li>
                                 <div>
-                                    <p>Cadastrar Post</p>
+                                    <a href="#">Cadastrar Post</a>
                                     <div></div>
                                 </div>
                             </li>
                             <li>
                                 <div>
-                                    <p>Listar Post</p>
+                                    <a href="#">Listar Post</a>
                                     <div></div>
                                 </div>
                             </li>
@@ -39,13 +39,13 @@
                         <ul>
                             <li>
                                 <div>
-                                    <p>Cadastrar Nova</p>
+                                    <a href="#">Cadastrar Nova</a>
                                     <div></div>
                                 </div>
                             </li>
                             <li>
                                 <div>
-                                    <p>Listar Paginas</p>
+                                    <a href="#">Listar Paginas</a>
                                     <div></div>
                                 </div>
                             </li>
@@ -55,13 +55,13 @@
                         <ul>
                             <li>
                                 <div>
-                                    <p>Cadastrar Novo</p>
+                                    <a href="#">Cadastrar Novo</a>
                                     <div></div>
                                 </div>
                             </li>
                             <li>
                                 <div>
-                                    <p>Listar Usuários</p>
+                                    <a href="#">Listar Usuários</a>
                                     <div></div>
                                 </div>
                             </li>
@@ -71,13 +71,13 @@
                         <ul>
                             <li>
                                 <div>
-                                    <p>Visualizar o Site</p>
+                                    <a href="index.php" target="_blank">Visualizar o Site</a>
                                     <div></div>
                                 </div>
                             </li>
                             <li>
                                 <div>
-                                    <p>Logoff</p>
+                                    <a href="logout.php">Logoff</a>
                                     <div></div>
                                 </div>
                             </li>
@@ -87,9 +87,7 @@
             </aside>
             <section class="contentAdmin">
                 <h1>Página restrita</h1>
-                <section>
-                    <p>Olá, <?php echo $_SESSION['UsuarioNome']; ?>!</p>
-                </section>
+                <?php include 'views/mainPainel.php';?>
             </section>
         </div>
     </body>
