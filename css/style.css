@@ -358,4 +358,59 @@ footer {
     width: 94%;
     height: 500px; }
 
+.cadpost {
+  display: table;
+  width: 75%;
+  max-width: 800px;
+  margin: 40px auto; }
+  .cadpost label {
+    width: 100%;
+    padding: 5px 0;
+    display: block;
+    font-size: 20px;
+    color: #333;
+    font-family: 'OpenSans';
+    clear: both; }
+  .cadpost input[type="text"] {
+    width: 100%;
+    display: block;
+    background-color: #CCC;
+    color: #111;
+    border: none;
+    font-family: 'OpenSans';
+    font-size: 18px;
+    padding: 7px;
+    clear: both; }
+  .cadpost input[type="text"]:nth-child(2) {
+    width: 80%;
+    float: left; }
+  .cadpost a {
+    float: right;
+    text-decoration: none;
+    color: #FFF;
+    font-family: 'OpenSans';
+    font-size: 12px;
+    display: block;
+    background-color: #222;
+    padding: 10px 15px; }
+  .cadpost textarea {
+    width: 100%;
+    display: block;
+    background-color: #CCC;
+    color: #111;
+    border: none;
+    font-family: 'OpenSans';
+    resize: none;
+    height: 300px; }
+  .cadpost input[type="submit"] {
+    width: 150px;
+    float: right;
+    display: block;
+    background-color: #222;
+    font-family: 'OpenSans';
+    border: none;
+    margin: 35px auto;
+    color: #FFF;
+    padding: 10px 15px; }
+
 /*# sourceMappingURL=style.css.map */

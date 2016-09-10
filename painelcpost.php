@@ -23,7 +23,7 @@
                         <ul>
                             <li>
                                 <div>
-                                    <a href="painelcpost.php">Cadastrar Post</a>
+                                    <a href="#">Cadastrar Post</a>
                                     <div></div>
                                 </div>
                             </li>
@@ -86,24 +86,25 @@
                 </ul>
             </aside>
             <section class="contentAdmin">
-                <h1>Painel Gestor</h1>
-                <?php
-                    $query =  "SELECT Sum(visitas) as visitas from tb_publicacao";
-                    
-                    $visitas_total = mysqli_query($conexao, $query) or die(mysqli_error());
-
-                    if(@mysqli_num_rows($visitas_total) != '1'){
-                        echo '';
-                    }
-                    else{
-                        $resultado = mysqli_fetch_assoc($visitas_total);
-                    }
-
-                ?>
-                <section>
-                    <p>Olá, <?php echo $_SESSION['UsuarioNome']; ?>!</p>
-                    <p>Número de visitas: <?php echo $resultado['visitas'];?></p>
-                </section>
+                <h1>Cadastrar de Publicações</h1>
+                <article class="cadpost">
+                    <form action="cadastrarpost.php" method="GET">
+                        <label>Imagem</label>
+                        <input type="text" name="imagem"/>
+                        <a href="#">Selecione Imagem</a>
+                        <label>Titulo</label>
+                        <input type="text" name="titulo"/>
+                        <label>Categoria</label>
+                        <input type="text" name="categoria"/>
+                        <label>Data</label>
+                        <input type="text" name="data"/>
+                        <label>Autor</label>
+                        <input type="text" name="autor"/>
+                        <label>Texto</label>
+                        <textarea name="texto"></textarea>
+                        <input type="submit" value="Enviar"/>
+                    </form>
+                </article>
             </section>
         </div>
     </body>
