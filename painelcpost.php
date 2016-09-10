@@ -51,6 +51,22 @@
                             </li>
                         </ul>
                     </li>
+                    <li><span>Gerenciar Categorias</span>
+                        <ul>
+                            <li>
+                                <div>
+                                    <a href="#">Cadastrar Nova</a>
+                                    <div></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <a href="#">Listar Categorias</a>
+                                    <div></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
                     <li><span>Cadastrar Usuário</span>
                         <ul>
                             <li>
