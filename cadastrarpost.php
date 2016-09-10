@@ -1,4 +1,3 @@
-<html>
 <?php
     include "views/head.php"; 
     // A sessão precisa ser iniciada em cada página diferente
@@ -11,84 +10,64 @@
         header("Location: index.php"); exit;
     }
 ?>
-    <body>
-        <div class="Admin">
-            <aside class="sideAdmin">
-                <div>
-                    <img src="img/settings.png">
-                    <h1>Painel</h1>
-                </div>
-                <ul>
-                    <li><span>Gerenciar Posts</span>
-                        <ul>
-                            <li>
-                                <div>
-                                    <a href="#">Cadastrar Post</a>
-                                    <div></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <a href="#">Listar Post</a>
-                                    <div></div>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><span>Gerenciar Páginas</span>
-                        <ul>
-                            <li>
-                                <div>
-                                    <a href="#">Cadastrar Nova</a>
-                                    <div></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <a href="#">Listar Paginas</a>
-                                    <div></div>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><span>Cadastrar Usuário</span>
-                        <ul>
-                            <li>
-                                <div>
-                                    <a href="#">Cadastrar Novo</a>
-                                    <div></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <a href="#">Listar Usuários</a>
-                                    <div></div>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><span>Sistema</span>
-                        <ul>
-                            <li>
-                                <div>
-                                    <a href="index.php" target="_blank">Visualizar o Site</a>
-                                    <div></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <a href="logout.php">Logoff</a>
-                                    <div></div>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </aside>
-            <section class="contentAdmin">
-                <h1>Cadastrar de Publicações</h1>
-            </section>
-        </div>
-    </body>
 
-</html>
+<?php
+    
+    $titulo =       $_POST['titulo'];
+    $img =          $_FILES['imagem'];
+    $categoria =    $_POST['categoria'];
+    $data =         $_POST['data'];
+    $autor =        $_POST['autor'];
+    $texto =        $_POST['texto'];
+
+    $pasta = "uploads/$categoria";
+    $permitido = array('image/jpg', 'image/jpeg', 'image/pjpeg');
+
+    require("funcao_upload.php");
+        $nome = $img['name'];
+        $tmp = $img['tmp_name'];
+        $type = $img['type'];
+
+        $entrada = ("$data");
+
+    $entrada = trim("$data");
+    if(strstr($entrada, "/")){
+        $aux = explode("/", $entrada);
+        $aux2 = date('H:i:s');
+        $aux3 = $aux[2]."-".$aux[1]."-".$aux[0]." ". $aux2;
+    }
+
+    if(!empty($nome) && in_array($type, $permitido)){
+        $nomeimg = md5(uniqid(rand(),true)).".jpg";
+        Redimensionar($tmp, $nomeimg, 500, $pasta);
+
+        $query = "INSERT INTO tb_publicacao (thumb,
+                            titulo,
+                            categoria,
+                            data,
+                            autor,
+                            texto,
+                            visitas) 
+                        VALUES ('$nomeimg', 
+                                '$titulo', 
+                                '$categoria', 
+                                '$aux3', 
+                                '$autor', 
+                                '$texto',
+                                '1')";
+        
+        $cadastro_publicacao = mysqli_query($conexao, $query)
+        or die (mysql_error());
+
+        if($cadastro_publicacao >= '1'){
+            echo "Publicação Cadastrada";
+            header("Location: painelcpost.php?sit=ok"); exit;
+        }
+        else{
+            echo "Erro ao enviar mensagem";
+            header("Location: painelcpost.php?sit=erro"); exit;
+        }
+
+    }
+
+?>
