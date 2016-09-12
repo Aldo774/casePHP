@@ -223,6 +223,8 @@ footer {
         .sideAdmin > ul > li ul > li:hover > div div {
           animation-name: menu;
           animation-duration: 1s; }
+    .sideAdmin > ul > li:first-child ul > li:hover > div div {
+      background-color: #000 !important; }
     .sideAdmin > ul > li:nth-child(5n+1) ul > li:hover:nth-child(7n+1) > div div {
       background-color: #000099; }
     .sideAdmin > ul > li:nth-child(5n+1) ul > li:hover:nth-child(7n+2) > div div {
@@ -345,8 +347,9 @@ footer {
   float: right;
   height: 800px;
   display: table;
-  background-color: #FFF; }
-  .contentAdmin h1 {
+  background-color: #FFF;
+  font-family: 'OpenSans'; }
+  .contentAdmin > h1 {
     background-color: #ddd;
     padding: 63px 20px;
     color: #111;
@@ -377,7 +380,6 @@ footer {
     display: block;
     font-size: 20px;
     color: #333;
-    font-family: 'OpenSans';
     clear: both; }
   .cadpost input[type="text"], .cadpost select {
     width: 100%;
@@ -385,7 +387,6 @@ footer {
     background-color: #CCC;
     color: #111;
     border: none;
-    font-family: 'OpenSans';
     font-size: 18px;
     padding: 7px;
     clear: both; }
@@ -396,7 +397,6 @@ footer {
     float: left;
     text-decoration: none;
     color: #FFF;
-    font-family: 'OpenSans';
     font-size: 12px;
     display: block;
     background-color: #222;
@@ -407,7 +407,6 @@ footer {
     background-color: #CCC;
     color: #111;
     border: none;
-    font-family: 'OpenSans';
     resize: none;
     height: 300px; }
   .cadpost input[type="submit"] {
@@ -415,10 +414,46 @@ footer {
     float: right;
     display: block;
     background-color: #222;
-    font-family: 'OpenSans';
     border: none;
     margin: 35px auto;
     color: #FFF;
     padding: 10px 15px; }
+
+.listarPubs {
+  display: table;
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #111; }
+  .listarPubs span {
+    width: 20%;
+    display: table;
+    float: left;
+    text-align: center; }
+  .listarPubs span:first-child {
+    width: 40%;
+    text-align: left; }
+  .listarPubs h1 {
+    display: table;
+    width: 100%;
+    font-weight: normal;
+    background-color: #111; }
+  .listarPubs div {
+    display: table;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-bottom: 2px solid #888;
+    padding: 5px 15px;
+    margin: 5px 0; }
+    .listarPubs div a {
+      display: block;
+      width: 20%;
+      float: left;
+      text-decoration: none; }
+      .listarPubs div a > span {
+        margin: 0 auto;
+        display: block;
+        float: none; }
 
 /*# sourceMappingURL=style.css.map */

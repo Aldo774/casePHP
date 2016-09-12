@@ -103,6 +103,16 @@ footer{background-color: #555; padding: 20px 0;
 			}	
 		}
 
+		& >li:first-child{
+			ul{
+				& >li:hover{
+					>div{
+						div{background-color: #000 !important;}
+					}
+				}
+			}
+		}
+
 		& >li:nth-child(5n+1){
 			ul{
 				& >li:hover:nth-child(7n+1){
@@ -314,18 +324,29 @@ footer{background-color: #555; padding: 20px 0;
 	}
 }
 
-.contentAdmin{width: 75%; float: right; height: 800px; display: table; background-color: #FFF;
-	h1{background-color: #ddd; padding: 63px 20px; color: #111; border-bottom: 5px solid #333;}
+.contentAdmin{width: 75%; float: right; height: 800px; display: table; background-color: #FFF; font-family: 'OpenSans';
+	>h1{background-color: #ddd; padding: 63px 20px; color: #111; border-bottom: 5px solid #333;}
 	>section{margin: 10px 1%; padding: 10px 2%; background-color: #FFF; width: 94%; height: 500px;}
 }
 
 .cadpost{display: table; width: 75%; max-width: 800px; margin: 40px auto;
 	h1{background-color: #EAA; color: #955; border: none;}
 	.ok{background-color: #AEA; color: #595; border: none;}
-	label{width: 100%; padding: 5px 0; display: block; font-size: 20px; color: #333; font-family: 'OpenSans'; clear: both;}
-	input[type="text"],select{width: 100%; display: block; background-color: #CCC; color: #111; border: none; font-family: 'OpenSans'; font-size: 18px; padding: 7px; clear: both;}
+	label{width: 100%; padding: 5px 0; display: block; font-size: 20px; color: #333; clear: both;}
+	input[type="text"],select{width: 100%; display: block; background-color: #CCC; color: #111; border: none; font-size: 18px; padding: 7px; clear: both;}
 	input[type="text"]:nth-child(2){width: 80%; float: left;};
-	input[type="file"]{float: left; text-decoration: none; color: #FFF; font-family: 'OpenSans'; font-size: 12px; display: block; background-color: #222; padding: 10px 15px;}
-	textarea{width: 100%; display: block; background-color: #CCC; color: #111; border: none; font-family: 'OpenSans'; resize: none; height: 300px;}
-	input[type="submit"]{width: 150px; float: right; display: block; background-color: #222; font-family: 'OpenSans'; border: none; margin: 35px auto; color: #FFF; padding: 10px 15px;}
+	input[type="file"]{float: left; text-decoration: none; color: #FFF; font-size: 12px; display: block; background-color: #222; padding: 10px 15px;}
+	textarea{width: 100%; display: block; background-color: #CCC; color: #111; border: none; resize: none; height: 300px;}
+	input[type="submit"]{width: 150px; float: right; display: block; background-color: #222; border: none; margin: 35px auto; color: #FFF; padding: 10px 15px;}
+}
+
+.listarPubs{display: table; width: 80%; max-width: 800px; margin: 0 auto; color: #111;
+	span{width: 20%; display: table; float: left; text-align: center;}
+	span:first-child{width: 40%; text-align: left;};
+	h1{display: table; width: 100%; font-weight: normal; background-color: #111;}
+	div{display: table; width: 100%; max-width: 800px; margin: 0 auto; border-bottom: 2px solid #888; padding: 5px 15px; margin: 5px 0;
+		a{display: block; width: 20%; float: left; text-decoration: none;
+			>span{margin: 0 auto; display: block; float: none;}
+		}
+	}
 }
