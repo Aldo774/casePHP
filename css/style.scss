@@ -341,12 +341,29 @@ footer{background-color: #555; padding: 20px 0;
 }
 
 .listarPubs{display: table; width: 80%; max-width: 800px; margin: 0 auto; color: #111;
-	span{width: 20%; display: table; float: left; text-align: center;}
-	span:first-child{width: 40%; text-align: left;};
-	h1{display: table; width: 100%; font-weight: normal; background-color: #111;}
-	div{display: table; width: 100%; max-width: 800px; margin: 0 auto; border-bottom: 2px solid #888; padding: 5px 15px; margin: 5px 0;
-		a{display: block; width: 20%; float: left; text-decoration: none;
-			>span{margin: 0 auto; display: block; float: none;}
+	span{width: 17.5%; display: table; float: left; text-align: center;}
+	span:first-child{width: 30%; text-align: left;};
+	h1{display: table; width: 100%; font-weight: normal; background-color: #111; margin: 15px 0 0;}
+	div{display: table; width: 100%; max-width: 800px; margin: 0 auto; border-bottom: 2px solid #888; padding: 10px 15px 5px;
+		>span{padding: 6px 0;}
+		form{display: block; width: 17.5%; float: left; margin: 0; cursor: pointer;
+			input[type="submit"]{margin: 0 auto; display: block; float: none; border: none; cursor: pointer;}
+		}
+		form:nth-child(4){
+			input[type="submit"]{background: url("../img/edit.png") center center no-repeat; width: 30px; height: 30px;};
+			input[type="submit"]:hover{border: 2px solid #FFF; border-radius: 17px;}
+		}
+		form:nth-child(5){
+			input[type="submit"]{background: url("../img/del.png") center center no-repeat; width: 30px; height: 30px;};
+			input[type="submit"]:hover{border: 2px solid #FFF; border-radius: 17px;}
+		}
+	}
+	& div:hover{background-color: #666; transition: 0.3s; color: #FFF;
+		form:nth-child(4){
+			input[type="submit"]{background: url("../img/editB.png") center center no-repeat;};
+		}
+		form:nth-child(5){
+			input[type="submit"]{background: url("../img/delB.png") center center no-repeat;};
 		}
 	}
 }

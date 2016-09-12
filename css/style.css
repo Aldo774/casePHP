@@ -426,34 +426,61 @@ footer {
   margin: 0 auto;
   color: #111; }
   .listarPubs span {
-    width: 20%;
+    width: 17.5%;
     display: table;
     float: left;
     text-align: center; }
   .listarPubs span:first-child {
-    width: 40%;
+    width: 30%;
     text-align: left; }
   .listarPubs h1 {
     display: table;
     width: 100%;
     font-weight: normal;
-    background-color: #111; }
+    background-color: #111;
+    margin: 15px 0 0; }
   .listarPubs div {
     display: table;
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
     border-bottom: 2px solid #888;
-    padding: 5px 15px;
-    margin: 5px 0; }
-    .listarPubs div a {
+    padding: 10px 15px 5px; }
+    .listarPubs div > span {
+      padding: 6px 0; }
+    .listarPubs div form {
       display: block;
-      width: 20%;
+      width: 17.5%;
       float: left;
-      text-decoration: none; }
-      .listarPubs div a > span {
+      margin: 0;
+      cursor: pointer; }
+      .listarPubs div form input[type="submit"] {
         margin: 0 auto;
         display: block;
-        float: none; }
+        float: none;
+        border: none;
+        cursor: pointer; }
+    .listarPubs div form:nth-child(4) input[type="submit"] {
+      background: url("../img/edit.png") center center no-repeat;
+      width: 30px;
+      height: 30px; }
+    .listarPubs div form:nth-child(4) input[type="submit"]:hover {
+      border: 2px solid #FFF;
+      border-radius: 17px; }
+    .listarPubs div form:nth-child(5) input[type="submit"] {
+      background: url("../img/del.png") center center no-repeat;
+      width: 30px;
+      height: 30px; }
+    .listarPubs div form:nth-child(5) input[type="submit"]:hover {
+      border: 2px solid #FFF;
+      border-radius: 17px; }
+  .listarPubs div:hover {
+    background-color: #666;
+    transition: 0.3s;
+    color: #FFF; }
+    .listarPubs div:hover form:nth-child(4) input[type="submit"] {
+      background: url("../img/editB.png") center center no-repeat; }
+    .listarPubs div:hover form:nth-child(5) input[type="submit"] {
+      background: url("../img/delB.png") center center no-repeat; }
 
 /*# sourceMappingURL=style.css.map */
