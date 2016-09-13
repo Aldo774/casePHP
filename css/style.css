@@ -393,7 +393,7 @@ footer {
   font-size: 18px;
   padding: 7px;
   clear: both; }
-.cadpost input[type="text"]:nth-child(2) {
+.cadpost input[type="text"]:nth-child(4) {
   width: 80%;
   float: left; }
 .cadpost input[type="file"] {
@@ -408,10 +408,12 @@ footer {
   width: 100%;
   display: block;
   background-color: #CCC;
+  padding: 10px 15px;
   color: #111;
   border: none;
   resize: none;
-  height: 300px; }
+  height: 300px;
+  font: 16px 'OpenSans'; }
 .cadpost input[type="submit"] {
   width: 150px;
   float: right;

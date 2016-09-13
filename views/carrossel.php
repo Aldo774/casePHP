@@ -10,8 +10,10 @@ $limite = '3,5';
 	$consulta = "Select 
 		thumb, 
 		titulo,
+		categoria,
 		id
-		from tb_publicacao
+		from tb_publicacao 
+		ORDER BY data desc 
 		LIMIT $limite";
 
 	$publicacoes = mysqli_query($conexao, $consulta) or die(mysql_error());
@@ -19,14 +21,15 @@ $limite = '3,5';
 		echo "<h1>Não há publicãções disponíveis</h1>";
 	}
 	else{
-		$path = "uploads/publicacoes/imagens/";
+		$path = "uploads/";
 		while($res_publicacoes = mysqli_fetch_array($publicacoes)){
 			$thumb = $res_publicacoes[0];
 			$titulo = utf8_encode($res_publicacoes[1]);
-			$id = $res_publicacoes[2];
+			$categoria = $res_publicacoes[2];
+			$id = $res_publicacoes[3];
 ?>
 			<a href="single.php?topico=<?php echo $id;?>">
-	            <li class="item"><img src="<?php echo $path; echo $thumb;?>" alt="<?php echo $titulo;?>" title="<?php echo $titulo;?>"/>
+	            <li class="item"><img src="<?php echo $path.$categoria.'/'.$thumb?>" alt="<?php echo $titulo;?>" title="<?php echo $titulo;?>"/>
 	            	<h1><?php echo $titulo;?></h1>
 	            </li>
 	        </a>

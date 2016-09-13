@@ -31,12 +31,13 @@
 
 <?php
 
-    $consulta = "Select 
+    $consulta = "SELECT 
         titulo, 
         categoria,
         Data,
         id
-        from tb_publicacao";
+        from tb_publicacao 
+        ORDER BY data desc";
 
     $publicacoes = mysqli_query($conexao, $consulta) or die(mysql_error());
     if(@mysql_num_rows == '0'){
@@ -54,7 +55,7 @@
                         <span><?php echo $titulo;?></span>
                         <span><?php echo date('d/m/y', strtotime($data));?></span>
                         <span><?php echo $categoria;?></span>
-                        <form method="post" action="controller.php">
+                        <form method="post" action="painelcpost.php">
                             <input type="hidden" name="id" value="<?php echo $id;?>">
                             <input type="hidden" name="acao" value="editar">
                             <input type="submit" value="">
