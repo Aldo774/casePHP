@@ -11,12 +11,22 @@
                 <h1>Listar Publicações</h1>
 
                 <article class="listarPubs">
+<?php
+    if(isset($_GET['sit'])){
+        if ($_GET['sit'] == 'okexc') {
+            echo "<h1 class='ok'>Publicação excluida com sucesso</h1>";
+        }
+        elseif ($_GET['sit'] == 'erroexc'){
+            echo "<h1 class='error'>Falha ao excluir publicação</h1>";
+        }
+    }
+?>
                     <h1>
                         <span>Titulo</span>
                         <span>Data</span>
                         <span>Categoria</span>
-                        <span>Excluir</span>
                         <span>Editar</span>
+                        <span>Excluir</span>
                     </h1>
 
 <?php
@@ -44,12 +54,14 @@
                         <span><?php echo $titulo;?></span>
                         <span><?php echo date('d/m/y', strtotime($data));?></span>
                         <span><?php echo $categoria;?></span>
-                        <form method="post" action="editPub.php">
-                            <input type="hidden" value="<?php echo $id;?>">
+                        <form method="post" action="controller.php">
+                            <input type="hidden" name="id" value="<?php echo $id;?>">
+                            <input type="hidden" name="acao" value="editar">
                             <input type="submit" value="">
                         </form>
-                        <form method="post" action="excluirPub.php">
-                            <input type="hidden" value="<?php echo $id;?>">
+                        <form method="post" action="controller.php">
+                            <input type="hidden" name="id" value="<?php echo $id;?>">
+                            <input type="hidden" name="acao" value="excluir">
                             <input type="submit" value="">
                         </form>
                     </div>
@@ -57,7 +69,6 @@
     }
 }
 ?>
-
                 </article>
             </section>
         </div>

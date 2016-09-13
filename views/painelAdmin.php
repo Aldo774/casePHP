@@ -24,7 +24,7 @@
                 </li>
                 <li>
                     <div>
-                        <a href="#">Listar Post</a>
+                        <a href="listarpost.php">Listar Post</a>
                         <div></div>
                     </div>
                 </li>

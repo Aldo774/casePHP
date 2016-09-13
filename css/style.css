@@ -361,63 +361,66 @@ footer {
     width: 94%;
     height: 500px; }
 
-.cadpost {
+.erro, .cadpost, .listarPubs {
   display: table;
   width: 75%;
   max-width: 800px;
   margin: 40px auto; }
-  .cadpost h1 {
+  .erro .error, .cadpost .error, .listarPubs .error {
     background-color: #EAA;
     color: #955;
-    border: none; }
-  .cadpost .ok {
+    border: none;
+    padding: 30px 20px; }
+  .erro .ok, .cadpost .ok, .listarPubs .ok {
     background-color: #AEA;
     color: #595;
-    border: none; }
-  .cadpost label {
-    width: 100%;
-    padding: 5px 0;
-    display: block;
-    font-size: 20px;
-    color: #333;
-    clear: both; }
-  .cadpost input[type="text"], .cadpost select {
-    width: 100%;
-    display: block;
-    background-color: #CCC;
-    color: #111;
     border: none;
-    font-size: 18px;
-    padding: 7px;
-    clear: both; }
-  .cadpost input[type="text"]:nth-child(2) {
-    width: 80%;
-    float: left; }
-  .cadpost input[type="file"] {
-    float: left;
-    text-decoration: none;
-    color: #FFF;
-    font-size: 12px;
-    display: block;
-    background-color: #222;
-    padding: 10px 15px; }
-  .cadpost textarea {
-    width: 100%;
-    display: block;
-    background-color: #CCC;
-    color: #111;
-    border: none;
-    resize: none;
-    height: 300px; }
-  .cadpost input[type="submit"] {
-    width: 150px;
-    float: right;
-    display: block;
-    background-color: #222;
-    border: none;
-    margin: 35px auto;
-    color: #FFF;
-    padding: 10px 15px; }
+    padding: 30px 20px; }
+
+.cadpost label {
+  width: 100%;
+  padding: 5px 0;
+  display: block;
+  font-size: 20px;
+  color: #333;
+  clear: both; }
+.cadpost input[type="text"], .cadpost select {
+  width: 100%;
+  display: block;
+  background-color: #CCC;
+  color: #111;
+  border: none;
+  font-size: 18px;
+  padding: 7px;
+  clear: both; }
+.cadpost input[type="text"]:nth-child(2) {
+  width: 80%;
+  float: left; }
+.cadpost input[type="file"] {
+  float: left;
+  text-decoration: none;
+  color: #FFF;
+  font-size: 12px;
+  display: block;
+  background-color: #222;
+  padding: 10px 15px; }
+.cadpost textarea {
+  width: 100%;
+  display: block;
+  background-color: #CCC;
+  color: #111;
+  border: none;
+  resize: none;
+  height: 300px; }
+.cadpost input[type="submit"] {
+  width: 150px;
+  float: right;
+  display: block;
+  background-color: #222;
+  border: none;
+  margin: 35px auto;
+  color: #FFF;
+  padding: 10px 15px; }
 
 .listarPubs {
   display: table;

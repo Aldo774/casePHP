@@ -14,14 +14,14 @@
     $query = "SELECT nome from tb_categoria";
     $consulta = mysqli_query($conexao, $query) or die(mysqli_error());
 ?>
+
 <?php
     if(isset($_GET['sit'])){
-        $msg = $_GET['sit'];
-        if ($msg == 'ok') {
+        if ($_GET['sit'] == 'ok') {
             echo "<h1 class='ok'>Publicação cadastrada com sucesso</h1>";
         }
         else{
-            echo "<h1>Falha ao cadastrar publicação</h1>";
+            echo "<h1 class='error'>Falha ao cadastrar publicação</h1>";
         }
     }
 ?>
