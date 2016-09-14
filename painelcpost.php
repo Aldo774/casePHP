@@ -12,17 +12,6 @@
     $query_c = "SELECT nome from tb_categoria";
     $consulta_cat = mysqli_query($conexao, $query_c) or die(mysqli_error());
 
-    if(isset($_GET['sit'])){
-        if ($_GET['sit'] == 'ok') {
-            echo "<h1 class='ok'>Publicação cadastrada com sucesso</h1>";
-        }
-        else{
-            echo "<h1 class='error'>Falha ao cadastrar publicação</h1>";
-        }
-    }
-
-?
-
 /*----------------------------------------------------------------*/
 /*------------------------PAGINA P/ EDIÇÃO------------------------*/
 
@@ -59,7 +48,21 @@ if (isset($_POST['acao']) && $_POST['acao'] == 'editar') {
 
                 <h1>Editar Publicação</h1>
                 <article class="cadpost">
-                    <form action="controller.php" method="POST" enctype="multipart/form-data">
+
+<?php
+
+    if(isset($_GET['sit'])){
+        if ($_GET['sit'] == 'ok') {
+            echo "<h1 class='ok'>Publicação cadastrada com sucesso</h1>";
+        }
+        else{
+            echo "<h1 class='error'>Falha ao cadastrar publicação</h1>";
+        }
+    }
+
+?>
+
+                    <form action="controllerPub.php" method="POST" enctype="multipart/form-data">
                         <input type="hidden" name="acao" value="editar">
                         <input type="hidden" name="id" value="<?php echo $id;?>">
                         <label>Imagem</label>
@@ -108,7 +111,20 @@ else{
 
                 <h1>Cadastro de Publicação</h1>
                 <article class="cadpost">
-                    <form action="controller.php" method="POST" enctype="multipart/form-data">
+
+<?php
+
+    if(isset($_GET['sit'])){
+        if ($_GET['sit'] == 'ok') {
+            echo "<h1 class='ok'>Publicação cadastrada com sucesso</h1>";
+        }
+        else{
+            echo "<h1 class='error'>Falha ao cadastrar publicação</h1>";
+        }
+    }
+
+?>
+                    <form action="controllerPub.php" method="POST" enctype="multipart/form-data">
                         <input type="hidden" name="acao" value="cadastrar">
                         <label>Imagem</label>
                         <input type="file" name="imagem" size="60"/>

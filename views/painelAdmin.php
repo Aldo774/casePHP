@@ -34,13 +34,7 @@
             <ul>
                 <li>
                     <div>
-                        <a href="#">Cadastrar Nova</a>
-                        <div></div>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <a href="#">Listar Paginas</a>
+                        <a href="painelcpage.php">Editar/Cadastrar Nova</a>
                         <div></div>
                     </div>
                 </li>

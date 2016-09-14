@@ -327,20 +327,28 @@ footer{background-color: #555; padding: 20px 0;
 .contentAdmin{width: 75%; float: right; height: 800px; display: table; background-color: #FFF; font-family: 'OpenSans';
 	>h1{background-color: #ddd; padding: 63px 20px; color: #111; border-bottom: 5px solid #333;}
 	>section{margin: 10px 1%; padding: 10px 2%; background-color: #FFF; width: 94%; height: 500px;}
+	>form{width: 75%; margin: 0 auto; display: table; max-width: 800px;
+		label{width: 100%; display: block;}
+		select{display: block; background-color: #CCC; color: #111; border: none; font-size: 18px; padding: 7px; width: 70%; float: left;}
+		input[type="submit"]{width: 200px; float: right; display: block; background-color: #222; border: none; color: #FFF; padding: 10px 15px;}
+	}
 }
 
-.erro, .cadpost, .listarPubs{display: table; width: 75%; max-width: 800px; margin: 40px auto;
+.erro, .cadpost, .cadpage, .listarPubs{display: table; width: 75%; max-width: 800px; margin: 40px auto;
 	.error{background-color: #EAA; color: #955; border: none; padding: 30px 20px;}
 	.ok{background-color: #AEA; color: #595; border: none; padding: 30px 20px;}
 }
 
-.cadpost{
+.cadpost, .cadpage{
 	label{width: 100%; padding: 5px 0; display: block; font-size: 20px; color: #333; clear: both;}
-	input[type="text"],select{width: 100%; display: block; background-color: #CCC; color: #111; border: none; font-size: 18px; padding: 7px; clear: both;}
-	input[type="text"]:nth-child(4){width: 80%; float: left;};
-	input[type="file"]{float: left; text-decoration: none; color: #FFF; font-size: 12px; display: block; background-color: #222; padding: 10px 15px;}
+	input[type="text"], select{width: 100%; display: block; background-color: #CCC; color: #111; border: none; font-size: 18px; padding: 7px; clear: both;}
 	textarea{width: 100%; display: block; background-color: #CCC; padding: 10px 15px; color: #111; border: none; resize: none; height: 300px; font: 16px 'OpenSans'}
 	input[type="submit"]{width: 150px; float: right; display: block; background-color: #222; border: none; margin: 35px auto; color: #FFF; padding: 10px 15px;}
+}
+
+.cadpost{
+	input[type="text"]:nth-child(4){width: 80%; float: left;};
+	input[type="file"]{float: left; text-decoration: none; color: #FFF; font-size: 12px; display: block; background-color: #222; padding: 10px 15px;}
 }
 
 .listarPubs{display: table; width: 80%; max-width: 800px; margin: 0 auto; color: #111;

@@ -60,7 +60,7 @@
                             <input type="hidden" name="acao" value="editar">
                             <input type="submit" value="">
                         </form>
-                        <form method="post" action="controller.php">
+                        <form method="post" action="controllerPub.php">
                             <input type="hidden" name="id" value="<?php echo $id;?>">
                             <input type="hidden" name="acao" value="excluir">
                             <input type="submit" value="">
