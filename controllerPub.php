@@ -48,10 +48,10 @@
 
         elseif ($_POST['acao'] == 'cadastrar') {
 
-            $titulo =       $_POST['titulo'];
+            $titulo =       strip_tags(trim($_POST['titulo']));
             $img =          $_FILES['imagem'];
             $categoria =    $_POST['categoria'];
-            $data =         $_POST['data'];
+            $data =         strip_tags(trim($_POST['data']));
             $autor =        $_SESSION['UsuarioID'];
             $texto =        $_POST['texto'];
             $categoria_nome = "";
@@ -129,9 +129,9 @@
         elseif ($_POST['acao'] == 'editar' && isset($_POST['id'])) {
 
             $id =           $_POST['id'];
-            $titulo =       $_POST['titulo'];
+            $titulo =       strip_tags(trim($_POST['titulo']));
             $categoria =    $_POST['categoria'];
-            $data =         $_POST['data'];
+            $data =         strip_tags(trim($_POST['data']));
             $autor =        $_SESSION['UsuarioID'];
             $texto =        $_POST['texto'];
             $entrada = ("$data");

@@ -9,7 +9,7 @@
 
         if ($_POST['acao'] == 'cadastrar') {
 
-            $pagina =       $_POST['pagina'];
+            $pagina =      strip_tags(trim($_POST['pagina']));
             $conteudo =    $_POST['conteudo'];
 
             $query = "INSERT INTO tb_page (pagina,
@@ -37,8 +37,8 @@
         elseif ($_POST['acao'] == 'editar' && isset($_POST['id'])) {
 
             $id =           $_POST['id'];
-            $pagina =       $_POST['pagina'];
-            $conteudo =    $_POST['conteudo'];
+            $pagina =       strip_tags(trim($_POST['pagina']));
+            $conteudo =     $_POST['conteudo'];
 
             $query = "UPDATE tb_page SET 
                                 pagina = '$pagina', 

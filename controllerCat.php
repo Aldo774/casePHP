@@ -58,7 +58,7 @@
 
         if ($_POST['acao'] == 'cadastrar') {
 
-            $nome = $_POST['nome'];
+            $nome = strip_tags(trim($_POST['nome']));
 
             $query = "INSERT INTO tb_categoria (nome) 
                             VALUES ('$nome')";
@@ -83,7 +83,7 @@
         elseif ($_POST['acao'] == 'editar' && isset($_POST['id'])) {
 
             $id =           $_POST['id'];
-            $nome =       $_POST['nome'];
+            $nome =         strip_tags(trim($_POST['nome']));
 
             $query = "UPDATE tb_categoria 
                         SET nome = '$nome' 

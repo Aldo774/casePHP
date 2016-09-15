@@ -29,7 +29,7 @@
         $_SESSION['UsuarioNivel'] = $resultado['nivel'];
       
         // Redireciona o visitante
-        header("Location: restrito.php"); exit;        
+        header("Location: restrito.php"); exit;
     }
 
 ?>

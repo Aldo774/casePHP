@@ -27,10 +27,10 @@
 
         if ($_POST['acao'] == 'cadastrar') {
 
-            $usuario =  $_POST['usuario'];
-            $senha =    $_POST['senha'];
-            $nivel =    $_POST['nivel'];
-            $email =    $_POST['email'];
+            $usuario =  strip_tags(trim($_POST['usuario']));
+            $senha =    strip_tags(trim($_POST['senha']));
+            $nivel =    strip_tags(trim($_POST['nivel']));
+            $email =    strip_tags(trim($_POST['email']));
 
             $query = "INSERT INTO tb_usuario (usuario, 
                         senha, 
@@ -63,10 +63,10 @@
         elseif ($_POST['acao'] == 'editar' && isset($_POST['id'])) {
 
             $id =       $_POST['id'];
-            $usuario =  $_POST['usuario'];
-            $senha =    $_POST['senha'];
-            $nivel =    $_POST['nivel'];
-            $email =    $_POST['email'];
+            $usuario =  strip_tags(trim($_POST['usuario']));
+            $senha =    strip_tags(trim($_POST['senha']));
+            $nivel =    strip_tags(trim($_POST['nivel']));
+            $email =    strip_tags(trim($_POST['email']));
 
             $query = "UPDATE tb_usuario 
                         SET usuario = '$usuario', 
