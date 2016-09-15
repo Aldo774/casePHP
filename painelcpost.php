@@ -25,7 +25,6 @@ if (isset($_POST['acao']) && $_POST['acao'] == 'editar') {
         tb_categoria.nome, 
         tb_categoria.id, 
         tb_publicacao.data, 
-        tb_publicacao.autor, 
         tb_publicacao.texto, 
         tb_publicacao.id 
         FROM tb_publicacao 
@@ -45,9 +44,8 @@ if (isset($_POST['acao']) && $_POST['acao'] == 'editar') {
             $categoria = $res_publicacoes[2];
             $categoria_id = $res_publicacoes[3];
             $data = $res_publicacoes[4];
-            $autor = utf8_encode($res_publicacoes[5]);
-            $texto = $res_publicacoes[6];
-            $id = $res_publicacoes[7];
+            $texto = $res_publicacoes[5];
+            $id = $res_publicacoes[6];
     
 ?>
 
@@ -94,8 +92,6 @@ if (isset($_POST['acao']) && $_POST['acao'] == 'editar') {
 
                         <label>Data</label>
                         <input type="text" name="data" value="<?php echo date('d/m/y', strtotime($data));?>"/>
-                        <label>Autor</label>
-                        <input type="text" name="autor" value="<?php echo $autor;?>"/>
                         <label>Texto</label>
                         <textarea name="texto"><?php echo $texto;?></textarea>
                         <input type="submit" value="Enviar"/>
@@ -155,8 +151,6 @@ else{
 
                         <label>Data</label>
                         <input type="text" name="data"/>
-                        <label>Autor</label>
-                        <input type="text" name="autor"/>
                         <label>Texto</label>
                         <textarea name="texto"></textarea>
                         <input type="submit" value="Enviar"/>

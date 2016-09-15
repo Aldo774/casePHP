@@ -334,12 +334,12 @@ footer{background-color: #555; padding: 20px 0;
 	}
 }
 
-.erro, .cadpost, .cadpage, .cadcat, .listarPubs, .listarCat{display: table; width: 75%; max-width: 800px; margin: 40px auto;
+.erro, .cadpost, .cadpage, .cadcat, .caduser, .listarPubs, .listarCat, .listarUser{display: table; width: 75%; max-width: 800px; margin: 40px auto;
 	.error{background-color: #EAA; color: #955; border: none; padding: 30px 20px;}
 	.ok{background-color: #AEA; color: #595; border: none; padding: 30px 20px;}
 }
 
-.cadpost, .cadpage{
+.cadpost, .cadpage, .caduser{
 	label{width: 100%; padding: 5px 0; display: block; font-size: 20px; color: #333; clear: both;}
 	input[type="text"], select{width: 100%; display: block; background-color: #CCC; color: #111; border: none; font-size: 18px; padding: 7px; clear: both;}
 	textarea{width: 100%; display: block; background-color: #CCC; padding: 10px 15px; color: #111; border: none; resize: none; height: 300px; font: 16px 'OpenSans'}
@@ -351,7 +351,7 @@ footer{background-color: #555; padding: 20px 0;
 	input[type="file"]{float: left; text-decoration: none; color: #FFF; font-size: 12px; display: block; background-color: #222; padding: 10px 15px;}
 }
 
-.listarPubs, .listarCat{display: table; width: 80%; max-width: 800px; margin: 0 auto; color: #111;
+.listarPubs, .listarCat, .listarUser{display: table; width: 80%; max-width: 800px; margin: 0 auto; color: #111;
 	span{width: 17.5%; display: table; float: left; text-align: center;}
 	span:first-child{width: 30%; text-align: left;};
 	h1{display: table; width: 100%; font-weight: normal; background-color: #111; margin: 15px 0 0;}
@@ -401,6 +401,28 @@ footer{background-color: #555; padding: 20px 0;
 			input[type="submit"]{background: url("../img/editB.png") center center no-repeat;};
 		}
 		form:nth-child(3){
+			input[type="submit"]{background: url("../img/delB.png") center center no-repeat;};
+		}
+	}
+}
+
+.listarUser{
+	span:first-child{width: 47.5%;};
+	div{
+		form:nth-child(3){
+			input[type="submit"]{background: url("../img/edit.png") center center no-repeat; width: 30px; height: 30px;};
+			input[type="submit"]:hover{border: 2px solid #FFF; border-radius: 17px;}
+		}
+		form:nth-child(4){
+			input[type="submit"]{background: url("../img/del.png") center center no-repeat; width: 30px; height: 30px;};
+			input[type="submit"]:hover{border: 2px solid #FFF; border-radius: 17px;}
+		}
+	}
+	& div:hover{background-color: #666; transition: 0.3s; color: #FFF;
+		form:nth-child(3){
+			input[type="submit"]{background: url("../img/editB.png") center center no-repeat;};
+		}
+		form:nth-child(4){
 			input[type="submit"]{background: url("../img/delB.png") center center no-repeat;};
 		}
 	}

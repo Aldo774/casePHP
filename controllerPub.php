@@ -52,7 +52,7 @@
             $img =          $_FILES['imagem'];
             $categoria =    $_POST['categoria'];
             $data =         $_POST['data'];
-            $autor =        $_POST['autor'];
+            $autor =        $_SESSION['UsuarioID'];
             $texto =        $_POST['texto'];
             $categoria_nome = "";
 
@@ -132,7 +132,7 @@
             $titulo =       $_POST['titulo'];
             $categoria =    $_POST['categoria'];
             $data =         $_POST['data'];
-            $autor =        $_POST['autor'];
+            $autor =        $_SESSION['UsuarioID'];
             $texto =        $_POST['texto'];
             $entrada = ("$data");
             $entrada = trim("$data");

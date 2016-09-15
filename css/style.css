@@ -390,30 +390,30 @@ footer {
       font-size: 15px;
       cursor: pointer; }
 
-.erro, .cadpost, .cadpage, .cadcat, .listarPubs, .listarCat {
+.erro, .cadpost, .cadpage, .cadcat, .caduser, .listarPubs, .listarCat, .listarUser {
   display: table;
   width: 75%;
   max-width: 800px;
   margin: 40px auto; }
-  .erro .error, .cadpost .error, .cadpage .error, .cadcat .error, .listarPubs .error, .listarCat .error {
+  .erro .error, .cadpost .error, .cadpage .error, .cadcat .error, .caduser .error, .listarPubs .error, .listarCat .error, .listarUser .error {
     background-color: #EAA;
     color: #955;
     border: none;
     padding: 30px 20px; }
-  .erro .ok, .cadpost .ok, .cadpage .ok, .cadcat .ok, .listarPubs .ok, .listarCat .ok {
+  .erro .ok, .cadpost .ok, .cadpage .ok, .cadcat .ok, .caduser .ok, .listarPubs .ok, .listarCat .ok, .listarUser .ok {
     background-color: #AEA;
     color: #595;
     border: none;
     padding: 30px 20px; }
 
-.cadpost label, .cadpage label {
+.cadpost label, .cadpage label, .caduser label {
   width: 100%;
   padding: 5px 0;
   display: block;
   font-size: 20px;
   color: #333;
   clear: both; }
-.cadpost input[type="text"], .cadpost select, .cadpage input[type="text"], .cadpage select {
+.cadpost input[type="text"], .cadpost select, .cadpage input[type="text"], .cadpage select, .caduser input[type="text"], .caduser select {
   width: 100%;
   display: block;
   background-color: #CCC;
@@ -422,7 +422,7 @@ footer {
   font-size: 18px;
   padding: 7px;
   clear: both; }
-.cadpost textarea, .cadpage textarea {
+.cadpost textarea, .cadpage textarea, .caduser textarea {
   width: 100%;
   display: block;
   background-color: #CCC;
@@ -432,7 +432,7 @@ footer {
   resize: none;
   height: 300px;
   font: 16px 'OpenSans'; }
-.cadpost input[type="submit"], .cadpage input[type="submit"] {
+.cadpost input[type="submit"], .cadpage input[type="submit"], .caduser input[type="submit"] {
   width: 150px;
   float: right;
   display: block;
@@ -455,42 +455,42 @@ footer {
   background-color: #222;
   padding: 10px 15px; }
 
-.listarPubs, .listarCat {
+.listarPubs, .listarCat, .listarUser {
   display: table;
   width: 80%;
   max-width: 800px;
   margin: 0 auto;
   color: #111; }
-  .listarPubs span, .listarCat span {
+  .listarPubs span, .listarCat span, .listarUser span {
     width: 17.5%;
     display: table;
     float: left;
     text-align: center; }
-  .listarPubs span:first-child, .listarCat span:first-child {
+  .listarPubs span:first-child, .listarCat span:first-child, .listarUser span:first-child {
     width: 30%;
     text-align: left; }
-  .listarPubs h1, .listarCat h1 {
+  .listarPubs h1, .listarCat h1, .listarUser h1 {
     display: table;
     width: 100%;
     font-weight: normal;
     background-color: #111;
     margin: 15px 0 0; }
-  .listarPubs div, .listarCat div {
+  .listarPubs div, .listarCat div, .listarUser div {
     display: table;
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
     border-bottom: 2px solid #888;
     padding: 10px 15px 5px; }
-    .listarPubs div > span, .listarCat div > span {
+    .listarPubs div > span, .listarCat div > span, .listarUser div > span {
       padding: 6px 0; }
-    .listarPubs div form, .listarCat div form {
+    .listarPubs div form, .listarCat div form, .listarUser div form {
       display: block;
       width: 17.5%;
       float: left;
       margin: 0;
       cursor: pointer; }
-      .listarPubs div form input[type="submit"], .listarCat div form input[type="submit"] {
+      .listarPubs div form input[type="submit"], .listarCat div form input[type="submit"], .listarUser div form input[type="submit"] {
         margin: 0 auto;
         display: block;
         float: none;
@@ -543,6 +543,31 @@ footer {
   .listarCat div:hover form:nth-child(2) input[type="submit"] {
     background: url("../img/editB.png") center center no-repeat; }
   .listarCat div:hover form:nth-child(3) input[type="submit"] {
+    background: url("../img/delB.png") center center no-repeat; }
+
+.listarUser span:first-child {
+  width: 47.5%; }
+.listarUser div form:nth-child(3) input[type="submit"] {
+  background: url("../img/edit.png") center center no-repeat;
+  width: 30px;
+  height: 30px; }
+.listarUser div form:nth-child(3) input[type="submit"]:hover {
+  border: 2px solid #FFF;
+  border-radius: 17px; }
+.listarUser div form:nth-child(4) input[type="submit"] {
+  background: url("../img/del.png") center center no-repeat;
+  width: 30px;
+  height: 30px; }
+.listarUser div form:nth-child(4) input[type="submit"]:hover {
+  border: 2px solid #FFF;
+  border-radius: 17px; }
+.listarUser div:hover {
+  background-color: #666;
+  transition: 0.3s;
+  color: #FFF; }
+  .listarUser div:hover form:nth-child(3) input[type="submit"] {
+    background: url("../img/editB.png") center center no-repeat; }
+  .listarUser div:hover form:nth-child(4) input[type="submit"] {
     background: url("../img/delB.png") center center no-repeat; }
 
 /*# sourceMappingURL=style.css.map */

@@ -60,13 +60,13 @@
             <ul>
                 <li>
                     <div>
-                        <a href="#">Cadastrar Novo</a>
+                        <a href="painelcuser.php">Cadastrar Novo</a>
                         <div></div>
                     </div>
                 </li>
                 <li>
                     <div>
-                        <a href="#">Listar Usuários</a>
+                        <a href="listarusuario.php">Listar Usuários</a>
                         <div></div>
                     </div>
                 </li>

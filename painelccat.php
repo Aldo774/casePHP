@@ -32,7 +32,7 @@ if (isset($_POST['acao']) && $_POST['acao'] == 'editar') {
             $nome = $res_cat[1];
 ?>
 
-                <h1>Editar Pagina</h1>
+                <h1>Editar Categoria</h1>
                 <article class="cadcat">
 
 <?php
@@ -69,7 +69,7 @@ else{
 
 ?>
 
-                <h1>Cadastro de Pagina</h1>
+                <h1>Cadastro de Categoria</h1>
                 <article class="cadcat">
 
 <?php

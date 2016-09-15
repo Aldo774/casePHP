@@ -8,50 +8,55 @@
             <?php include"views/painelAdmin.php";?>
 
             <section class="contentAdmin">
-                <h1>Listar Categorias</h1>
+                <h1>Listar Usuários</h1>
 
-                <article class="listarCat">
+                <article class="listarUser">
 <?php
     if(isset($_GET['sit'])){
         if ($_GET['sit'] == 'okexc') {
-            echo "<h1 class='ok'>Categoria excluida com sucesso</h1>";
+            echo "<h1 class='ok'>Usuário excluido com sucesso</h1>";
         }
         elseif ($_GET['sit'] == 'erroexc'){
-            echo "<h1 class='error'>Falha ao excluir Categoria</h1>";
+            echo "<h1 class='error'>Falha ao excluir usuário</h1>";
         }
     }
 ?>
                     <h1>
-                        <span>Nome da Categoria</span>
+                        <span>Nome do Usuário</span>
+                        <span>Nível</span>
                         <span>Editar</span>
                         <span>Excluir</span>
                     </h1>
 
 <?php
 
-    $consulta = "SELECT nome, id 
-                    from tb_categoria 
+    $consulta = "SELECT usuario, 
+                    nivel, 
+                    id 
+                    from tb_usuario 
                     ORDER BY id desc";
         
-    $categorias = mysqli_query($conexao, $consulta) or die(mysql_error());
+    $usuarios = mysqli_query($conexao, $consulta) or die(mysql_error());
 
     if(@mysql_num_rows == '0'){
-        echo "<h1>Não há categorias disponíveis</h1>";
+        echo "<h1>Não há usuarios disponíveis</h1>";
     }
     else{
-        while($res_categorias = mysqli_fetch_array($categorias)){
-            $nome = utf8_encode($res_categorias[0]);
-            $id = $res_categorias[1];
+        while($res_usuarios = mysqli_fetch_array($usuarios)){
+            $usuario = utf8_encode($res_usuarios[0]);
+            $nivel = $res_usuarios[1];
+            $id = $res_usuarios[2];
 ?>
 
                     <div>
-                        <span><?php echo $nome;?></span>
-                        <form method="post" action="painelccat.php">
+                        <span><?php echo $usuario;?></span>
+                        <span><?php echo $nivel;?></span>
+                        <form method="post" action="painelcuser.php">
                             <input type="hidden" name="id" value="<?php echo $id;?>">
                             <input type="hidden" name="acao" value="editar">
                             <input type="submit" value="">
                         </form>
-                        <form method="post" action="controllerCat.php">
+                        <form method="post" action="controllerUser.php">
                             <input type="hidden" name="id" value="<?php echo $id;?>">
                             <input type="hidden" name="acao" value="excluir">
                             <input type="submit" value="">
