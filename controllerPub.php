@@ -4,14 +4,16 @@
     
     if (isset($_POST['acao'])) {
 
-        $id = $_POST['id'];
-
 /*--------------------------------------EXCLUIR-------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 
         if ($_POST['acao'] == 'excluir' && isset($_POST['id'])) {
+            $id = $_POST['id'];
             //echo "excluir";
-            $query_img = "SELECT thumb, categoria FROM tb_publicacao WHERE id = '$id'";
+            $query_img = "SELECT tb_publicacao.thumb, tb_categoria.nome 
+                            FROM tb_publicacao INNER JOIN tb_categoria ON 
+                            (tb_publicacao.categoria = tb_categoria.id) 
+                            WHERE tb_publicacao.id = '$id'";
 
             $resultado = mysqli_query($conexao, $query_img) or die (mysqli_error());
 
@@ -31,11 +33,9 @@
                     $deletar_pub = mysqli_query($conexao, $deletar) or die(mysqli_error());
 
                     if ($deletar_pub >= '1') {
-                        echo "Publicação Cadastrada";
                         header("Location: listarpost.php?sit=okexc"); exit;
                     }
                     else{
-                        echo "Erro ao enviar mensagem";
                         header("Location: painelcpost.php?sit=erroexc"); exit;
                     }
                 }
@@ -54,8 +54,21 @@
             $data =         $_POST['data'];
             $autor =        $_POST['autor'];
             $texto =        $_POST['texto'];
+            $categoria_nome = "";
 
-            $pasta = "uploads/$categoria";
+            $query_cimg = "SELECT nome FROM tb_categoria WHERE id = '$categoria'";
+            $resultado_query_cat = mysqli_query($conexao, $query_cimg);
+
+            if(@mysqli_num_rows($resultado_query_cat) <= '0'){
+                echo 'ERRO';
+            }
+            else{
+                while ($resultado_cat = mysqli_fetch_assoc($resultado_query_cat)) {
+                    $categoria_nome = $resultado_cat['nome'];
+                }
+            }
+
+            $pasta = "uploads/$categoria_nome";
             $permitido = array('image/jpg', 'image/jpeg', 'image/pjpeg');
 
             require("funcao_upload.php");
@@ -123,6 +136,7 @@
             $texto =        $_POST['texto'];
             $entrada = ("$data");
             $entrada = trim("$data");
+            $categoria_nome = "";
 
             if (!$data) {
                 $entrada = date('d/m/y');
@@ -151,16 +165,27 @@
             //if (isset($_FILES['imagem'])) {
 
             //Deleta a imagem antiga---------------------------------------------------
+                $query_cimg = "SELECT nome FROM tb_categoria WHERE id = '$categoria'";
+                $resultado_query_cat = mysqli_query($conexao, $query_cimg);
+
+                if(@mysqli_num_rows($resultado_query_cat) <= '0'){
+                    echo 'ERRO';
+                }
+                else{
+                    while ($resultado_cat = mysqli_fetch_assoc($resultado_query_cat)) {
+                        $categoria_nome = $resultado_cat['nome'];
+                    }
+                }
 
 
-                $img =      $_FILES['imagem'];                
+                $img =      $_FILES['imagem'];             
 
                 require("funcao_upload.php");
 
                 $nome = $img['name'];
                 $tmp = $img['tmp_name'];
                 $type = $img['type'];
-                $pasta = "uploads/$categoria";
+                $pasta = "uploads/$categoria_nome";
                 $permitido = array('image/jpg', 'image/jpeg', 'image/pjpeg');
 
                 if(!empty($nome) && in_array($type, $permitido)){
@@ -168,7 +193,7 @@
                     Redimensionar($tmp, $nomeimg, 500, $pasta);
                 }
 
-                $query_img = "SELECT thumb, categoria FROM tb_publicacao WHERE id = '$id'";
+                $query_img = "SELECT thumb FROM tb_publicacao WHERE id = '$id'";
                 $resultado_img = mysqli_query($conexao, $query_img) or die (mysqli_error());
 
                 if (@mysqli_num_rows($resultado_img) <= '0') {
@@ -178,9 +203,8 @@
                 {
                     while ($res_resultado_img=mysqli_fetch_array($resultado_img)) {
                         $thumb_meta = $res_resultado_img[0];
-                        $categoria_meta = $res_resultado_img[1];
 
-                        $del = unlink("uploads/".$categoria."/".$thumb_meta);
+                        $del = unlink("uploads/".$categoria_nome."/".$thumb_meta);
                     }
                 }
 

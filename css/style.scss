@@ -327,14 +327,14 @@ footer{background-color: #555; padding: 20px 0;
 .contentAdmin{width: 75%; float: right; height: 800px; display: table; background-color: #FFF; font-family: 'OpenSans';
 	>h1{background-color: #ddd; padding: 63px 20px; color: #111; border-bottom: 5px solid #333;}
 	>section{margin: 10px 1%; padding: 10px 2%; background-color: #FFF; width: 94%; height: 500px;}
-	>form{width: 75%; margin: 0 auto; display: table; max-width: 800px;
-		label{width: 100%; display: block;}
-		select{display: block; background-color: #CCC; color: #111; border: none; font-size: 18px; padding: 7px; width: 70%; float: left;}
-		input[type="submit"]{width: 200px; float: right; display: block; background-color: #222; border: none; color: #FFF; padding: 10px 15px;}
+	>form, .cadcat{width: 75%; margin: 0 auto; display: table; max-width: 800px;
+		label{width: 100%; display: block; font-size: 20px; margin: 10px 0;}
+		select,input{display: block; background-color: #CCC; color: #111; border: none; font-size: 18px; padding: 7px; width: 70%; float: left;}
+		input[type="submit"]{width: 200px; float: right; display: block; background-color: #222; border: none; color: #FFF; padding: 10px 15px; font-size: 15px; cursor: pointer;}
 	}
 }
 
-.erro, .cadpost, .cadpage, .listarPubs{display: table; width: 75%; max-width: 800px; margin: 40px auto;
+.erro, .cadpost, .cadpage, .cadcat, .listarPubs, .listarCat{display: table; width: 75%; max-width: 800px; margin: 40px auto;
 	.error{background-color: #EAA; color: #955; border: none; padding: 30px 20px;}
 	.ok{background-color: #AEA; color: #595; border: none; padding: 30px 20px;}
 }
@@ -343,7 +343,7 @@ footer{background-color: #555; padding: 20px 0;
 	label{width: 100%; padding: 5px 0; display: block; font-size: 20px; color: #333; clear: both;}
 	input[type="text"], select{width: 100%; display: block; background-color: #CCC; color: #111; border: none; font-size: 18px; padding: 7px; clear: both;}
 	textarea{width: 100%; display: block; background-color: #CCC; padding: 10px 15px; color: #111; border: none; resize: none; height: 300px; font: 16px 'OpenSans'}
-	input[type="submit"]{width: 150px; float: right; display: block; background-color: #222; border: none; margin: 35px auto; color: #FFF; padding: 10px 15px;}
+	input[type="submit"]{width: 150px; float: right; display: block; background-color: #222; border: none; margin: 35px auto; color: #FFF; padding: 10px 15px; cursor: pointer;}
 }
 
 .cadpost{
@@ -351,7 +351,7 @@ footer{background-color: #555; padding: 20px 0;
 	input[type="file"]{float: left; text-decoration: none; color: #FFF; font-size: 12px; display: block; background-color: #222; padding: 10px 15px;}
 }
 
-.listarPubs{display: table; width: 80%; max-width: 800px; margin: 0 auto; color: #111;
+.listarPubs, .listarCat{display: table; width: 80%; max-width: 800px; margin: 0 auto; color: #111;
 	span{width: 17.5%; display: table; float: left; text-align: center;}
 	span:first-child{width: 30%; text-align: left;};
 	h1{display: table; width: 100%; font-weight: normal; background-color: #111; margin: 15px 0 0;}
@@ -360,6 +360,11 @@ footer{background-color: #555; padding: 20px 0;
 		form{display: block; width: 17.5%; float: left; margin: 0; cursor: pointer;
 			input[type="submit"]{margin: 0 auto; display: block; float: none; border: none; cursor: pointer;}
 		}
+	}
+}
+
+.listarPubs{
+	div{
 		form:nth-child(4){
 			input[type="submit"]{background: url("../img/edit.png") center center no-repeat; width: 30px; height: 30px;};
 			input[type="submit"]:hover{border: 2px solid #FFF; border-radius: 17px;}
@@ -374,6 +379,28 @@ footer{background-color: #555; padding: 20px 0;
 			input[type="submit"]{background: url("../img/editB.png") center center no-repeat;};
 		}
 		form:nth-child(5){
+			input[type="submit"]{background: url("../img/delB.png") center center no-repeat;};
+		}
+	}
+}
+
+.listarCat{
+	span:first-child{width: 65%;};
+	div{
+		form:nth-child(2){
+			input[type="submit"]{background: url("../img/edit.png") center center no-repeat; width: 30px; height: 30px;};
+			input[type="submit"]:hover{border: 2px solid #FFF; border-radius: 17px;}
+		}
+		form:nth-child(3){
+			input[type="submit"]{background: url("../img/del.png") center center no-repeat; width: 30px; height: 30px;};
+			input[type="submit"]:hover{border: 2px solid #FFF; border-radius: 17px;}
+		}
+	}
+	& div:hover{background-color: #666; transition: 0.3s; color: #FFF;
+		form:nth-child(2){
+			input[type="submit"]{background: url("../img/editB.png") center center no-repeat;};
+		}
+		form:nth-child(3){
 			input[type="submit"]{background: url("../img/delB.png") center center no-repeat;};
 		}
 	}

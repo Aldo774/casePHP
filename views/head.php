@@ -1,7 +1,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<script type="text/javascript" src="js/lib/jquery-2.2.0.min.js"></script>
+		<script type="text/javascript" src="js/lib/jquery/jquery-2.2.0.min.js"></script>
 		<script type="text/javascript" src="js/script/carroussel.js"></script>
 		<script type="text/javascript" src="js/script/calcAlt.js"></script>
 		<title>HOME</title>

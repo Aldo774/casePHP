@@ -9,7 +9,7 @@
             <section class="contentAdmin">
 
 <?php
-    $query_c = "SELECT nome from tb_categoria";
+    $query_c = "SELECT id, nome from tb_categoria";
     $consulta_cat = mysqli_query($conexao, $query_c) or die(mysqli_error());
 
 /*----------------------------------------------------------------*/
@@ -20,15 +20,19 @@ if (isset($_POST['acao']) && $_POST['acao'] == 'editar') {
     $id = $_POST['id'];
 
     $consulta = "SELECT 
-        thumb,
-        titulo, 
-        categoria,
-        data,
-        autor, 
-        texto, 
-        id
-        from tb_publicacao 
-        WHERE id = '$id'";
+        tb_publicacao.thumb, 
+        tb_publicacao.titulo, 
+        tb_categoria.nome, 
+        tb_categoria.id, 
+        tb_publicacao.data, 
+        tb_publicacao.autor, 
+        tb_publicacao.texto, 
+        tb_publicacao.id 
+        FROM tb_publicacao 
+        INNER JOIN tb_categoria 
+        ON (tb_publicacao.categoria = tb_categoria.id) 
+        WHERE tb_publicacao.id = '$id' 
+        ORDER BY data desc";
 
     $publicacoes = mysqli_query($conexao, $consulta) or die(mysql_error());
     if(@mysql_num_rows == '0'){
@@ -39,10 +43,11 @@ if (isset($_POST['acao']) && $_POST['acao'] == 'editar') {
             $thumb = $res_publicacoes[0];
             $titulo = utf8_encode($res_publicacoes[1]);
             $categoria = $res_publicacoes[2];
-            $data = $res_publicacoes[3];
-            $autor = utf8_encode($res_publicacoes[4]);
-            $texto = $res_publicacoes[5];
-            $id = $res_publicacoes[6];
+            $categoria_id = $res_publicacoes[3];
+            $data = $res_publicacoes[4];
+            $autor = utf8_encode($res_publicacoes[5]);
+            $texto = $res_publicacoes[6];
+            $id = $res_publicacoes[7];
     
 ?>
 
@@ -78,9 +83,9 @@ if (isset($_POST['acao']) && $_POST['acao'] == 'editar') {
                 echo '<option>Selecione uma opção</option>';
             }
             else{
-                echo '<option value="'.$categoria.'">'.$categoria.'</option>';
+                echo '<option value="'.$categoria_id.'">'.$categoria.'</option>';
                 while ($resultado_cat = mysqli_fetch_assoc($consulta_cat)) {
-                    echo "<option value='".$resultado_cat['nome']."'>".$resultado_cat['nome']."</option>";
+                    echo "<option value='".$resultado_cat['id']."'>".$resultado_cat['nome']."</option>";
                 }
             }
         ?>
@@ -141,7 +146,7 @@ else{
         else{
             echo '<option value="">Selecione uma opção</option>';
             while ($resultado_cat = mysqli_fetch_assoc($consulta_cat)) {
-                echo "<option value='".$resultado_cat['nome']."'>".$resultado_cat['nome']."</option>";
+                echo "<option value='".$resultado_cat['id']."'>".$resultado_cat['nome']."</option>";
             }
         }
     ?>

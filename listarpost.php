@@ -32,11 +32,14 @@
 <?php
 
     $consulta = "SELECT 
-        titulo, 
-        categoria,
-        Data,
-        id
-        from tb_publicacao 
+        tb_publicacao.titulo, 
+        tb_categoria.nome, 
+        tb_categoria.id, 
+        tb_publicacao.Data, 
+        tb_publicacao.id 
+        from tb_publicacao INNER JOIN 
+        tb_categoria ON 
+        (tb_publicacao.categoria = tb_categoria.id) 
         ORDER BY data desc";
 
     $publicacoes = mysqli_query($conexao, $consulta) or die(mysql_error());
@@ -47,8 +50,9 @@
         while($res_publicacoes = mysqli_fetch_array($publicacoes)){
             $titulo = utf8_encode($res_publicacoes[0]);
             $categoria = $res_publicacoes[1];
-            $data = $res_publicacoes[2];
-            $id = $res_publicacoes[3];
+            $categoria_id = $res_publicacoes[2];
+            $data = $res_publicacoes[3];
+            $id = $res_publicacoes[4];
 ?>
 
                     <div>

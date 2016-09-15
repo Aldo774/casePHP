@@ -44,13 +44,13 @@
             <ul>
                 <li>
                     <div>
-                        <a href="#">Cadastrar Nova</a>
+                        <a href="painelccat.php">Cadastrar Nova</a>
                         <div></div>
                     </div>
                 </li>
                 <li>
                     <div>
-                        <a href="#">Listar Categorias</a>
+                        <a href="listarcat.php">Listar Categorias</a>
                         <div></div>
                     </div>
                 </li>

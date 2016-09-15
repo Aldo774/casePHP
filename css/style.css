@@ -360,15 +360,17 @@ footer {
     background-color: #FFF;
     width: 94%;
     height: 500px; }
-  .contentAdmin > form {
+  .contentAdmin > form, .contentAdmin .cadcat {
     width: 75%;
     margin: 0 auto;
     display: table;
     max-width: 800px; }
-    .contentAdmin > form label {
+    .contentAdmin > form label, .contentAdmin .cadcat label {
       width: 100%;
-      display: block; }
-    .contentAdmin > form select {
+      display: block;
+      font-size: 20px;
+      margin: 10px 0; }
+    .contentAdmin > form select, .contentAdmin > form input, .contentAdmin .cadcat select, .contentAdmin .cadcat input {
       display: block;
       background-color: #CCC;
       color: #111;
@@ -377,26 +379,28 @@ footer {
       padding: 7px;
       width: 70%;
       float: left; }
-    .contentAdmin > form input[type="submit"] {
+    .contentAdmin > form input[type="submit"], .contentAdmin .cadcat input[type="submit"] {
       width: 200px;
       float: right;
       display: block;
       background-color: #222;
       border: none;
       color: #FFF;
-      padding: 10px 15px; }
+      padding: 10px 15px;
+      font-size: 15px;
+      cursor: pointer; }
 
-.erro, .cadpost, .cadpage, .listarPubs {
+.erro, .cadpost, .cadpage, .cadcat, .listarPubs, .listarCat {
   display: table;
   width: 75%;
   max-width: 800px;
   margin: 40px auto; }
-  .erro .error, .cadpost .error, .cadpage .error, .listarPubs .error {
+  .erro .error, .cadpost .error, .cadpage .error, .cadcat .error, .listarPubs .error, .listarCat .error {
     background-color: #EAA;
     color: #955;
     border: none;
     padding: 30px 20px; }
-  .erro .ok, .cadpost .ok, .cadpage .ok, .listarPubs .ok {
+  .erro .ok, .cadpost .ok, .cadpage .ok, .cadcat .ok, .listarPubs .ok, .listarCat .ok {
     background-color: #AEA;
     color: #595;
     border: none;
@@ -436,7 +440,8 @@ footer {
   border: none;
   margin: 35px auto;
   color: #FFF;
-  padding: 10px 15px; }
+  padding: 10px 15px;
+  cursor: pointer; }
 
 .cadpost input[type="text"]:nth-child(4) {
   width: 80%;
@@ -450,68 +455,94 @@ footer {
   background-color: #222;
   padding: 10px 15px; }
 
-.listarPubs {
+.listarPubs, .listarCat {
   display: table;
   width: 80%;
   max-width: 800px;
   margin: 0 auto;
   color: #111; }
-  .listarPubs span {
+  .listarPubs span, .listarCat span {
     width: 17.5%;
     display: table;
     float: left;
     text-align: center; }
-  .listarPubs span:first-child {
+  .listarPubs span:first-child, .listarCat span:first-child {
     width: 30%;
     text-align: left; }
-  .listarPubs h1 {
+  .listarPubs h1, .listarCat h1 {
     display: table;
     width: 100%;
     font-weight: normal;
     background-color: #111;
     margin: 15px 0 0; }
-  .listarPubs div {
+  .listarPubs div, .listarCat div {
     display: table;
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
     border-bottom: 2px solid #888;
     padding: 10px 15px 5px; }
-    .listarPubs div > span {
+    .listarPubs div > span, .listarCat div > span {
       padding: 6px 0; }
-    .listarPubs div form {
+    .listarPubs div form, .listarCat div form {
       display: block;
       width: 17.5%;
       float: left;
       margin: 0;
       cursor: pointer; }
-      .listarPubs div form input[type="submit"] {
+      .listarPubs div form input[type="submit"], .listarCat div form input[type="submit"] {
         margin: 0 auto;
         display: block;
         float: none;
         border: none;
         cursor: pointer; }
-    .listarPubs div form:nth-child(4) input[type="submit"] {
-      background: url("../img/edit.png") center center no-repeat;
-      width: 30px;
-      height: 30px; }
-    .listarPubs div form:nth-child(4) input[type="submit"]:hover {
-      border: 2px solid #FFF;
-      border-radius: 17px; }
-    .listarPubs div form:nth-child(5) input[type="submit"] {
-      background: url("../img/del.png") center center no-repeat;
-      width: 30px;
-      height: 30px; }
-    .listarPubs div form:nth-child(5) input[type="submit"]:hover {
-      border: 2px solid #FFF;
-      border-radius: 17px; }
-  .listarPubs div:hover {
-    background-color: #666;
-    transition: 0.3s;
-    color: #FFF; }
-    .listarPubs div:hover form:nth-child(4) input[type="submit"] {
-      background: url("../img/editB.png") center center no-repeat; }
-    .listarPubs div:hover form:nth-child(5) input[type="submit"] {
-      background: url("../img/delB.png") center center no-repeat; }
+
+.listarPubs div form:nth-child(4) input[type="submit"] {
+  background: url("../img/edit.png") center center no-repeat;
+  width: 30px;
+  height: 30px; }
+.listarPubs div form:nth-child(4) input[type="submit"]:hover {
+  border: 2px solid #FFF;
+  border-radius: 17px; }
+.listarPubs div form:nth-child(5) input[type="submit"] {
+  background: url("../img/del.png") center center no-repeat;
+  width: 30px;
+  height: 30px; }
+.listarPubs div form:nth-child(5) input[type="submit"]:hover {
+  border: 2px solid #FFF;
+  border-radius: 17px; }
+.listarPubs div:hover {
+  background-color: #666;
+  transition: 0.3s;
+  color: #FFF; }
+  .listarPubs div:hover form:nth-child(4) input[type="submit"] {
+    background: url("../img/editB.png") center center no-repeat; }
+  .listarPubs div:hover form:nth-child(5) input[type="submit"] {
+    background: url("../img/delB.png") center center no-repeat; }
+
+.listarCat span:first-child {
+  width: 65%; }
+.listarCat div form:nth-child(2) input[type="submit"] {
+  background: url("../img/edit.png") center center no-repeat;
+  width: 30px;
+  height: 30px; }
+.listarCat div form:nth-child(2) input[type="submit"]:hover {
+  border: 2px solid #FFF;
+  border-radius: 17px; }
+.listarCat div form:nth-child(3) input[type="submit"] {
+  background: url("../img/del.png") center center no-repeat;
+  width: 30px;
+  height: 30px; }
+.listarCat div form:nth-child(3) input[type="submit"]:hover {
+  border: 2px solid #FFF;
+  border-radius: 17px; }
+.listarCat div:hover {
+  background-color: #666;
+  transition: 0.3s;
+  color: #FFF; }
+  .listarCat div:hover form:nth-child(2) input[type="submit"] {
+    background: url("../img/editB.png") center center no-repeat; }
+  .listarCat div:hover form:nth-child(3) input[type="submit"] {
+    background: url("../img/delB.png") center center no-repeat; }
 
 /*# sourceMappingURL=style.css.map */

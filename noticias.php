@@ -3,16 +3,19 @@
 
 $limite = '0,3';
 
-	$consulta = "Select 
-		thumb, 
-		titulo, 
-		texto, 
-		categoria,
-		id,
-		data
-		from tb_publicacao 
-		ORDER BY data desc 
-		LIMIT $limite";
+
+    $consulta = "SELECT 
+        tb_publicacao.thumb, 
+        tb_publicacao.titulo, 
+        tb_publicacao.texto, 
+        tb_categoria.nome, 
+        tb_publicacao.id, 
+        tb_publicacao.data 
+        FROM tb_publicacao 
+        INNER JOIN tb_categoria 
+        ON (tb_publicacao.categoria = tb_categoria.id) 
+        ORDER BY data desc 
+        LIMIT $limite";
 
 	$publicacoes = mysqli_query($conexao, $consulta) or die(mysql_error());
 	if(@mysql_num_rows == '0'){
