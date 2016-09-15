@@ -93,6 +93,9 @@ footer{background-color: #555; padding: 20px 0;
 					>div:first-child{font-size: 13px; font-family: 'OpenSans'; background-color: #404040; margin: 2px 0; cursor: pointer; width: 100%;
 						a{margin: 0; display: block; padding: 6px 10%; z-index: 2; position: relative; text-decoration: none; color: #FFF; font-size: 13px; font-family: 'OpenSans';}
 						>div{width: 100%; position: relative; z-index: 1; transition: 1s}
+						form{margin: 0;
+							input{margin: 0; display: block; padding: 6px 10%; z-index: 2; position: relative; color: #FFF; font-size: 13px; font-family: 'OpenSans'; background: none; float: none; width: 100%; text-align: left;}
+						}
 					}
 				}
 				& >li:hover{

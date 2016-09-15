@@ -1,6 +1,9 @@
 <html>
 <?php
     include "views/headPainel.php"; 
+    if ($_SESSION['UsuarioNivel'] != 1) {
+        header("Location: restrito.php"); exit;
+    }
 ?>
     <body>
         <div class="Admin">

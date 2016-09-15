@@ -42,7 +42,7 @@
         // Destrói a sessão por segurança
         session_destroy();
         // Redireciona o visitante de volta pro login
-        header("Location: index.php"); exit;
+        header("Location: login.php"); exit;
     }
 
 ?>

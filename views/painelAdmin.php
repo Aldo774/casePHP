@@ -58,6 +58,25 @@
         </li>
         <li><span>Cadastrar Usuário</span>
             <ul>
+
+<?php
+    if ($_SESSION['UsuarioNivel'] != 1) {
+?>
+
+                <li>
+                    <div>
+                        <form action="painelcuser.php" method="POST">
+                            <input type="hidden" name="acao" value="editar">
+                            <input type="hidden" name="id" value="<?php echo $_SESSION['UsuarioID'];?>">
+                            <input type="submit" value="Editar Usuário">
+                        </form>
+                        <div></div>
+                    </div>
+                </li>
+<?php
+    }
+    else{
+?>
                 <li>
                     <div>
                         <a href="painelcuser.php">Cadastrar Novo</a>
@@ -70,6 +89,9 @@
                         <div></div>
                     </div>
                 </li>
+<?php
+    }
+?>
             </ul>
         </li>
         <li><span>Sistema</span>

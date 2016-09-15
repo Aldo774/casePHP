@@ -18,6 +18,10 @@ if (isset($_POST['acao']) && $_POST['acao'] == 'editar') {
 
     $id = $_POST['id'];
 
+    if (($_SESSION['UsuarioNivel'] != 1) && ($_SESSION['UsuarioID'] != $id)) {
+        header("Location: restrito.php"); exit;
+    }
+
     $consulta = "SELECT 
         tb_usuario.id, 
         tb_usuario.usuario, 
@@ -76,7 +80,7 @@ if (isset($_POST['acao']) && $_POST['acao'] == 'editar') {
                 echo '<option>Selecione uma opção</option>';
             }
             else{
-                echo '<option value="'.$nivel_nvl.'">'.$nivel.'</option>';
+                echo '<option value="'.$nivel_nvl.'">'.utf8_encode($nivel).'</option>';
                 while ($resultado_user = mysqli_fetch_assoc($consulta_user)) {
                     echo "<option value='".$resultado_user['nivel']."'>".utf8_encode($resultado_user['nome'])."</option>";
                 }
@@ -98,6 +102,9 @@ if (isset($_POST['acao']) && $_POST['acao'] == 'editar') {
 }    
 else{
 
+    if ($_SESSION['UsuarioNivel'] != 1) {
+        header("Location: restrito.php"); exit;
+    }
 /*----------------------------------------------------------------*/
 /*------------------------PAGINA P/ CADASTRO----------------------*/
 
