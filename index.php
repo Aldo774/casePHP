@@ -4,28 +4,30 @@
 		<div class="titulo">
 			<div></div>
 			<div class="wrap">
-				<h1>Titulo</h1>
+				<img src="img/monk-logo.png">
+				<h1>O PRIMATA BOLADO</h1>
 			</div>
 		</div>
-		<div class="wrap">
-			<nav class="meno">
+		<nav class="meno">
+			<div class="wrap">
 				<ul>
-					<li><a href="#">page1</a></li>
-					<li><a href="#">page2</a></li>
-					<li><a href="#">page3</a></li>
-					<li><a href="#">page4</a></li>
-					<li><a href="#">page5</a></li>
+					<li><a href="#">HOME</a></li>
+					<li><a href="#">NOTICIAS</a></li>
+					<li><a href="#">SOBRE</a></li>
+					<li><a href="#">CONTATO</a></li>
 				</ul>
-			</nav>
-			<aside>
-				<div>
-					<form name="pesquisa" action="pesquisa.php" method="GET">
-						<input type="text" name="busca">
-						<input type="submit" value="">
-					</form>
-				</div>
+			</div>
+		</nav>
+		<div class="wrap">
+			<aside class="asideHome">
 				<article>
-					<h1>Sobre</h1>
+					<h1>Pesquisar</h1>
+					<div>
+						<form name="pesquisa" action="pesquisa.php" method="GET">
+							<input type="text" name="busca">
+							<input type="submit" value="">
+						</form>
+					</div>
 				</article>
 				<article>
 					<h1>Midia</h1>
@@ -36,7 +38,7 @@
 				<article>
 					<h1>Rede</h1>
 				</article>
-			</aside>		
+			</aside>
 		<?php include"noticias.php";?>			
 		</div>
 		<footer>
@@ -44,16 +46,28 @@
 				<div>
 					<div>
 						<h1>Logo</h1>
-					</div>
-					<div>
-						<h1>Contatos</h1>
+						<img src="img/monk-logo-B.png">
 					</div>
 					<div>
 						<h1>Links</h1>
-					</div>				
+						<a href="#">HOME</a>
+						<a href="#">NOTICIAS</a>
+						<a href="#">SOBRE</a>
+						<a href="#">CONTATO</a>
+					</div>
+					<div>
+						<h1>Contatos</h1>
+						<p><b>Email</b>: soares_aldo@hotmail.com</p>
+						<p><b>Tel</b>: (17)98195-1045</p>
+						<a href="http://www.facebook.com/aldo.santossoares" target="_blank"><img src="img/facebook.png"></a>
+						<a href="https://br.linkedin.com/in/soaresaldo" target="_blank"><img src="img/linkedin.png"></a>
+						<a href="https://github.com/Aldo774" target="_blank"><img src="img/github.png"></a>
+					</div>
 				</div>
-				<div>
-					<p>Desenvolvido para fins de estudo por ...</p>
+			</div>
+			<div>
+				<div class="wrap">
+					<p>Desenvolvido para fins de estudo por Aldo dos Santos Soares</p>
 				</div>
 			</div>
 		</footer>

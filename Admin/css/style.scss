@@ -1,0 +1,371 @@
+@font-face {
+    font-family: OpenSans;
+    src: url("fonts/OpenSans-Light.ttf");
+}
+
+h1{background-color: #000; color: #FFF; font-family: 'OpenSans'; padding: 10px 15px; margin: 0;}
+
+.wrap{max-width: 1140px; width: 100%; margin: 0 auto; display: table;}
+
+body{margin: 0;}
+
+.Admin{background-color: #282828; display: table; width: 100%; min-height: 100%;}
+
+@keyframes menu{
+	0% {width: 0}
+	100%{width: 100%;}
+}
+
+.sideAdmin{float: left; width: 25%; background-color: transparent; display: table;
+	>div:first-child{background-color:#222; display: table; width: 100%;
+		img{padding: 10px; display: block; width: 25%; text-align: left;}
+		h1{margin: 0; background-color: #111; font-size: 20px; padding: 21px 10;}		
+	}
+
+	>ul{padding: 0; margin: 0;
+
+		>li{list-style: none; width: 100%; color: #FFF;
+
+			>span{font-size: 14px; font-family: 'OpenSans'; margin: 0; background-color: #303030; display: block; padding: 6px 5%;}
+			ul{padding: 0; margin: 0;
+				>li{list-style: none; width: 100%; color: #FFF;
+					>div:first-child{font-size: 13px; font-family: 'OpenSans'; background-color: #404040; margin: 2px 0; cursor: pointer; width: 100%;
+						a{margin: 0; display: block; padding: 6px 10%; z-index: 2; position: relative; text-decoration: none; color: #FFF; font-size: 13px; font-family: 'OpenSans';}
+						>div{width: 100%; position: relative; z-index: 1; transition: 1s}
+						form{margin: 0;
+							input{margin: 0; display: block; padding: 6px 10%; z-index: 2; position: relative; color: #FFF; font-size: 13px; font-family: 'OpenSans'; background: none; float: none; width: 100%; text-align: left;}
+						}
+					}
+				}
+				& >li:hover{
+					>div{
+						div{animation-name: menu; animation-duration: 0.5s;}
+					}
+				}
+			}	
+		}
+
+		& >li:first-child{
+			ul{
+				& >li:hover{
+					>div{
+						div{background-color: #000 !important;}
+					}
+				}
+			}
+		}
+
+		& >li:nth-child(5n+1){
+			ul{
+				& >li:hover:nth-child(7n+1){
+					>div{
+						div{background-color: #000099;}
+					}
+				}
+				& >li:hover:nth-child(7n+2){
+					>div{
+						div{background-color: #0000EF;}
+					}
+				}
+				& >li:hover:nth-child(7n+3){
+					>div{
+						div{background-color: #3333FF;}
+					}
+				}
+				& >li:hover:nth-child(7n+4){
+					>div{
+						div{background-color: #6666FF;}
+					}
+				}
+				& >li:hover:nth-child(7n+5){
+					>div{
+						div{background-color: #3333FF;}
+					}
+				}
+				& >li:hover:nth-child(7n+6){
+					>div{
+						div{background-color: #0000EF;}
+					}
+				}
+				& >li:hover:nth-child(7n+7){
+					>div{
+						div{background-color: #000099;}
+					}
+				}
+			}
+		}
+
+		& >li:nth-child(5n+2){
+			ul{
+				>li:hover:nth-child(7n+1){
+					>div{
+						div{background-color: #590099;}
+					}	
+				}
+				& >li:hover:nth-child(7n+2){
+					>div{
+						div{background-color: #8600E6;}
+					}
+				}
+				& >li:hover:nth-child(7n+3){
+					>div{
+						div{background-color: #AA33FF;}
+					}
+				}
+				& >li:hover:nth-child(7n+4){
+					>div{
+						div{background-color: #CA80FF;}
+					}
+				}
+				& >li:hover:nth-child(7n+5){
+					>div{
+						div{background-color: #AA33FF;}
+					}
+				}
+				& >li:hover:nth-child(7n+6){
+					>div{
+						div{background-color: #8600E6;}
+					}
+				}
+				& >li:hover:nth-child(7n+7){
+					>div{
+						div{background-color: #590099;}
+					}
+				}				
+			}
+		}
+
+		& >li:nth-child(5n+3){
+			ul{
+				& >li:hover:nth-child(7n+1){
+					>div{
+						div{background-color: #006666;}
+					}
+				}
+				& >li:hover:nth-child(7n+2){
+					>div{
+						div{background-color: #009999;}
+					}
+				}
+				& >li:hover:nth-child(7n+3){
+					>div{
+						div{background-color: #00CCCC;}
+					}
+				}
+				& >li:hover:nth-child(7n+4){
+					>div{
+						div{background-color: #00FFFF;}
+					}
+				}
+				& >li:hover:nth-child(7n+5){
+					>div{
+						div{background-color: #00CCCC;}
+					}
+				}
+				& >li:hover:nth-child(7n+6){
+					>div{
+						div{background-color: #009999;}
+					}
+				}
+				& >li:hover:nth-child(7n+7){
+					>div{
+						div{background-color: #006666;}
+					}
+				}
+			}
+		}
+
+		& >li:nth-child(5n+4){
+			ul{
+				>li:hover:nth-child(7n+1){
+					>div{
+						div{background-color: #003300;}
+					}	
+				}
+				& >li:hover:nth-child(7n+2){
+					>div{
+						div{background-color: #004D00;}
+					}
+				}
+				& >li:hover:nth-child(7n+3){
+					>div{
+						div{background-color: #006600;}
+					}
+				}
+				& >li:hover:nth-child(7n+4){
+					>div{
+						div{background-color: #008800;}
+					}
+				}
+				& >li:hover:nth-child(7n+5){
+					>div{
+						div{background-color: #006600;}
+					}
+				}
+				& >li:hover:nth-child(7n+6){
+					>div{
+						div{background-color: #004D00;}
+					}
+				}
+				& >li:hover:nth-child(7n+7){
+					>div{
+						div{background-color: #003300;}
+					}
+				}				
+			}
+		}
+
+		& >li:nth-child(5n+5){
+			ul{
+				& >li:hover:nth-child(7n+1){
+					>div{
+						div{background-color: #994D00;}
+					}
+				}
+				& >li:hover:nth-child(7n+2){
+					>div{
+						div{background-color: #B35900;}
+					}
+				}
+				& >li:hover:nth-child(7n+3){
+					>div{
+						div{background-color: #CC6600;}
+					}
+				}
+				& >li:hover:nth-child(7n+4){
+					>div{
+						div{background-color: #E67300;}
+					}
+				}
+				& >li:hover:nth-child(7n+5){
+					>div{
+						div{background-color: #CC6600;}
+					}
+				}
+				& >li:hover:nth-child(7n+6){
+					>div{
+						div{background-color: #B35900;}
+					}
+				}
+				& >li:hover:nth-child(7n+7){
+					>div{
+						div{background-color: #994D00;}
+					}
+				}
+			}
+		}
+	}
+}
+
+.formLogin{background-color: #AAA;
+	form{display: table; position: relative; top: 15%; margin: 0 auto; width: 320px; background-color: #777; font-family: 'OpenSans'; color: #FFF; border-radius: 5px;
+		legend{background-color: #555; width: 90%; font-size: 20px; font-weight: bold; padding: 10px 5%; text-align: center; margin: 0 0 15px; border-radius: 5px;}
+		label{width: 100%; text-align: center; padding: 5px 0; display: block;}
+		input[type="text"], input[type="password"]{width: 80%; margin: 0 auto; display: block; padding: 5px 5%; background-color: #333; color: #FFF; border: none; font-family: 'OpenSans'}
+		input[type="submit"]{width: 80%; margin: 0 auto; display: block; background-color: #222; padding: 10px 0; font-family: 'OpenSans'; border: none; margin: 35px auto; color: #FFF;}
+	}
+}
+
+.contentAdmin{width: 75%; float: right; height: 800px; display: table; background-color: #FFF; font-family: 'OpenSans';
+	>h1{background-color: #222; padding: 36px 20px; color: #FFF;}
+	>section{margin: 10px 1%; padding: 10px 2%; background-color: #FFF; width: 94%; height: 500px;}
+	>form, .cadcat{width: 75%; margin: 0 auto; display: table; max-width: 800px;
+		label{width: 100%; display: block; font-size: 20px; margin: 10px 0;}
+		select,input{display: block; background-color: #CCC; color: #111; border: none; font-size: 18px; padding: 7px; width: 70%; float: left;}
+		input[type="submit"]{width: 200px; float: right; display: block; background-color: #222; border: none; color: #FFF; padding: 10px 15px; font-size: 15px; cursor: pointer;}
+	}
+}
+
+.erro, .cadpost, .cadpage, .cadcat, .caduser, .listarPubs, .listarCat, .listarUser{display: table; width: 75%; max-width: 800px; margin: 40px auto;
+	.error{background-color: #EAA; color: #955; border: none; padding: 30px 20px;}
+	.ok{background-color: #AEA; color: #595; border: none; padding: 30px 20px;}
+}
+
+.cadpost, .cadpage, .caduser{
+	label{width: 100%; padding: 5px 0; display: block; font-size: 20px; color: #333; clear: both;}
+	input[type="text"], select{width: 100%; display: block; background-color: #CCC; color: #111; border: none; font-size: 18px; padding: 7px; clear: both;}
+	textarea{width: 100%; display: block; background-color: #CCC; padding: 10px 15px; color: #111; border: none; resize: none; height: 300px; font: 16px 'OpenSans'}
+	input[type="submit"]{width: 150px; float: right; display: block; background-color: #222; border: none; margin: 35px auto; color: #FFF; padding: 10px 15px; cursor: pointer;}
+}
+
+.cadpost{
+	input[type="text"]:nth-child(4){width: 80%; float: left;};
+	input[type="file"]{float: left; text-decoration: none; color: #FFF; font-size: 12px; display: block; background-color: #222; padding: 10px 15px;}
+}
+
+.listarPubs, .listarCat, .listarUser{display: table; width: 80%; max-width: 800px; margin: 0 auto; color: #111;
+	span{width: 17.5%; display: table; float: left; text-align: center;}
+	span:first-child{width: 30%; text-align: left;};
+	h1{display: table; width: 100%; font-weight: normal; background-color: #111; margin: 15px 0 0;}
+	div{display: table; width: 100%; max-width: 800px; margin: 0 auto; border-bottom: 2px solid #888; padding: 10px 15px 5px;
+		>span{padding: 6px 0;}
+		form{display: block; width: 17.5%; float: left; margin: 0; cursor: pointer;
+			input[type="submit"]{margin: 0 auto; display: block; float: none; border: none; cursor: pointer;}
+		}
+	}
+}
+
+.listarPubs{
+	div{
+		form:nth-child(4){
+			input[type="submit"]{background: url("../img/edit.png") center center no-repeat; width: 30px; height: 30px;};
+			input[type="submit"]:hover{border: 2px solid #FFF; border-radius: 17px;}
+		}
+		form:nth-child(5){
+			input[type="submit"]{background: url("../img/del.png") center center no-repeat; width: 30px; height: 30px;};
+			input[type="submit"]:hover{border: 2px solid #FFF; border-radius: 17px;}
+		}
+	}
+	& div:hover{background-color: #666; transition: 0.3s; color: #FFF;
+		form:nth-child(4){
+			input[type="submit"]{background: url("../img/editB.png") center center no-repeat;};
+		}
+		form:nth-child(5){
+			input[type="submit"]{background: url("../img/delB.png") center center no-repeat;};
+		}
+	}
+}
+
+.listarCat{
+	span:first-child{width: 65%;};
+	div{
+		form:nth-child(2){
+			input[type="submit"]{background: url("../img/edit.png") center center no-repeat; width: 30px; height: 30px;};
+			input[type="submit"]:hover{border: 2px solid #FFF; border-radius: 17px;}
+		}
+		form:nth-child(3){
+			input[type="submit"]{background: url("../img/del.png") center center no-repeat; width: 30px; height: 30px;};
+			input[type="submit"]:hover{border: 2px solid #FFF; border-radius: 17px;}
+		}
+	}
+	& div:hover{background-color: #666; transition: 0.3s; color: #FFF;
+		form:nth-child(2){
+			input[type="submit"]{background: url("../img/editB.png") center center no-repeat;};
+		}
+		form:nth-child(3){
+			input[type="submit"]{background: url("../img/delB.png") center center no-repeat;};
+		}
+	}
+}
+
+.listarUser{
+	span:first-child{width: 47.5%;};
+	div{
+		form:nth-child(3){
+			input[type="submit"]{background: url("../img/edit.png") center center no-repeat; width: 30px; height: 30px;};
+			input[type="submit"]:hover{border: 2px solid #FFF; border-radius: 17px;}
+		}
+		form:nth-child(4){
+			input[type="submit"]{background: url("../img/del.png") center center no-repeat; width: 30px; height: 30px;};
+			input[type="submit"]:hover{border: 2px solid #FFF; border-radius: 17px;}
+		}
+	}
+	& div:hover{background-color: #666; transition: 0.3s; color: #FFF;
+		form:nth-child(3){
+			input[type="submit"]{background: url("../img/editB.png") center center no-repeat;};
+		}
+		form:nth-child(4){
+			input[type="submit"]{background: url("../img/delB.png") center center no-repeat;};
+		}
+	}
+}

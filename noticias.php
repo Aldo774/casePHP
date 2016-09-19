@@ -32,10 +32,10 @@ $limite = '0,3';
 ?>
 	<article>
 		<div>
+			<a href="single.php?topico=<?php echo $id;?>"><h1><?php echo $titulo;?></h1></a>
 			<img src="<?php echo $path.$categoria.'/'.$thumb?>">
 		</div>
 		<div>
-			<a href="single.php?topico=<?php echo $id;?>"><h1><?php echo $titulo;?></h1></a>
 			<p><?php echo $texto;?></p>
 		</div>
 	</article>

@@ -23,7 +23,7 @@
                 while ($res_resultado=mysqli_fetch_array($resultado)) {
                     $categoria_meta = $res_resultado[0];
 
-                    chdir("uploads/");
+                    chdir("../uploads/");
 
                     function rmdir_recursive($dir) {
                         foreach(scandir($dir) as $file) {
@@ -67,7 +67,7 @@
             or die (mysql_error());
 
             if($cadastro_categoria >= '1'){
-                chdir("uploads");
+                chdir("../uploads");
                 mkdir("$nome");
                 header("Location: painelccat.php?sit=ok"); exit;
             }
@@ -101,7 +101,7 @@
                 $categoria_meta = $res_resultado_n[0];
 
                 if(($cadastro_categoria >= '1') AND ($resultado_n >= '1')){
-                    chdir("uploads");
+                    chdir("../uploads");
                     rename("$categoria_meta", "$nome");
                     echo $categoria_meta." ".$nome;
                     header("Location: painelccat.php?sit=ok"); exit;

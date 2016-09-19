@@ -98,7 +98,7 @@
             <ul>
                 <li>
                     <div>
-                        <a href="index.php" target="_blank">Visualizar o Site</a>
+                        <a href="../index.php" target="_blank">Visualizar o Site</a>
                         <div></div>
                     </div>
                 </li>

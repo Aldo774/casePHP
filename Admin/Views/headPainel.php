@@ -32,7 +32,7 @@
 	ob_start("mb_output_handler");   
 	header("Content-Type: text/html; charset=ISO-8859-1",true);
 
-	include "connections/config.php";
+	include "../connections/config.php";
 	$conexao = mysqli_connect("$hostname_config", "$username_config", "$password_config", "$database_config")
 				or die(mysql_error("Erro ao acessar base de dados"));
 

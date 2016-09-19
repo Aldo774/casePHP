@@ -1,0 +1,457 @@
+@font-face {
+  font-family: OpenSans;
+  src: url("fonts/OpenSans-Light.ttf"); }
+h1 {
+  background-color: #000;
+  color: #FFF;
+  font-family: 'OpenSans';
+  padding: 10px 15px;
+  margin: 0; }
+
+.wrap {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+  display: table; }
+
+body {
+  margin: 0; }
+
+.Admin {
+  background-color: #282828;
+  display: table;
+  width: 100%;
+  min-height: 100%; }
+
+@keyframes menu {
+  0% {
+    width: 0; }
+  100% {
+    width: 100%; } }
+.sideAdmin {
+  float: left;
+  width: 25%;
+  background-color: transparent;
+  display: table; }
+  .sideAdmin > div:first-child {
+    background-color: #222;
+    display: table;
+    width: 100%; }
+    .sideAdmin > div:first-child img {
+      padding: 10px;
+      display: block;
+      width: 25%;
+      text-align: left; }
+    .sideAdmin > div:first-child h1 {
+      margin: 0;
+      background-color: #111;
+      font-size: 20px;
+      padding: 21px 10; }
+  .sideAdmin > ul {
+    padding: 0;
+    margin: 0; }
+    .sideAdmin > ul > li {
+      list-style: none;
+      width: 100%;
+      color: #FFF; }
+      .sideAdmin > ul > li > span {
+        font-size: 14px;
+        font-family: 'OpenSans';
+        margin: 0;
+        background-color: #303030;
+        display: block;
+        padding: 6px 5%; }
+      .sideAdmin > ul > li ul {
+        padding: 0;
+        margin: 0; }
+        .sideAdmin > ul > li ul > li {
+          list-style: none;
+          width: 100%;
+          color: #FFF; }
+          .sideAdmin > ul > li ul > li > div:first-child {
+            font-size: 13px;
+            font-family: 'OpenSans';
+            background-color: #404040;
+            margin: 2px 0;
+            cursor: pointer;
+            width: 100%; }
+            .sideAdmin > ul > li ul > li > div:first-child a {
+              margin: 0;
+              display: block;
+              padding: 6px 10%;
+              z-index: 2;
+              position: relative;
+              text-decoration: none;
+              color: #FFF;
+              font-size: 13px;
+              font-family: 'OpenSans'; }
+            .sideAdmin > ul > li ul > li > div:first-child > div {
+              width: 100%;
+              position: relative;
+              z-index: 1;
+              transition: 1s; }
+            .sideAdmin > ul > li ul > li > div:first-child form {
+              margin: 0; }
+              .sideAdmin > ul > li ul > li > div:first-child form input {
+                margin: 0;
+                display: block;
+                padding: 6px 10%;
+                z-index: 2;
+                position: relative;
+                color: #FFF;
+                font-size: 13px;
+                font-family: 'OpenSans';
+                background: none;
+                float: none;
+                width: 100%;
+                text-align: left; }
+        .sideAdmin > ul > li ul > li:hover > div div {
+          animation-name: menu;
+          animation-duration: 0.5s; }
+    .sideAdmin > ul > li:first-child ul > li:hover > div div {
+      background-color: #000 !important; }
+    .sideAdmin > ul > li:nth-child(5n+1) ul > li:hover:nth-child(7n+1) > div div {
+      background-color: #000099; }
+    .sideAdmin > ul > li:nth-child(5n+1) ul > li:hover:nth-child(7n+2) > div div {
+      background-color: #0000EF; }
+    .sideAdmin > ul > li:nth-child(5n+1) ul > li:hover:nth-child(7n+3) > div div {
+      background-color: #3333FF; }
+    .sideAdmin > ul > li:nth-child(5n+1) ul > li:hover:nth-child(7n+4) > div div {
+      background-color: #6666FF; }
+    .sideAdmin > ul > li:nth-child(5n+1) ul > li:hover:nth-child(7n+5) > div div {
+      background-color: #3333FF; }
+    .sideAdmin > ul > li:nth-child(5n+1) ul > li:hover:nth-child(7n+6) > div div {
+      background-color: #0000EF; }
+    .sideAdmin > ul > li:nth-child(5n+1) ul > li:hover:nth-child(7n+7) > div div {
+      background-color: #000099; }
+    .sideAdmin > ul > li:nth-child(5n+2) ul > li:hover:nth-child(7n+1) > div div {
+      background-color: #590099; }
+    .sideAdmin > ul > li:nth-child(5n+2) ul > li:hover:nth-child(7n+2) > div div {
+      background-color: #8600E6; }
+    .sideAdmin > ul > li:nth-child(5n+2) ul > li:hover:nth-child(7n+3) > div div {
+      background-color: #AA33FF; }
+    .sideAdmin > ul > li:nth-child(5n+2) ul > li:hover:nth-child(7n+4) > div div {
+      background-color: #CA80FF; }
+    .sideAdmin > ul > li:nth-child(5n+2) ul > li:hover:nth-child(7n+5) > div div {
+      background-color: #AA33FF; }
+    .sideAdmin > ul > li:nth-child(5n+2) ul > li:hover:nth-child(7n+6) > div div {
+      background-color: #8600E6; }
+    .sideAdmin > ul > li:nth-child(5n+2) ul > li:hover:nth-child(7n+7) > div div {
+      background-color: #590099; }
+    .sideAdmin > ul > li:nth-child(5n+3) ul > li:hover:nth-child(7n+1) > div div {
+      background-color: #006666; }
+    .sideAdmin > ul > li:nth-child(5n+3) ul > li:hover:nth-child(7n+2) > div div {
+      background-color: #009999; }
+    .sideAdmin > ul > li:nth-child(5n+3) ul > li:hover:nth-child(7n+3) > div div {
+      background-color: #00CCCC; }
+    .sideAdmin > ul > li:nth-child(5n+3) ul > li:hover:nth-child(7n+4) > div div {
+      background-color: #00FFFF; }
+    .sideAdmin > ul > li:nth-child(5n+3) ul > li:hover:nth-child(7n+5) > div div {
+      background-color: #00CCCC; }
+    .sideAdmin > ul > li:nth-child(5n+3) ul > li:hover:nth-child(7n+6) > div div {
+      background-color: #009999; }
+    .sideAdmin > ul > li:nth-child(5n+3) ul > li:hover:nth-child(7n+7) > div div {
+      background-color: #006666; }
+    .sideAdmin > ul > li:nth-child(5n+4) ul > li:hover:nth-child(7n+1) > div div {
+      background-color: #003300; }
+    .sideAdmin > ul > li:nth-child(5n+4) ul > li:hover:nth-child(7n+2) > div div {
+      background-color: #004D00; }
+    .sideAdmin > ul > li:nth-child(5n+4) ul > li:hover:nth-child(7n+3) > div div {
+      background-color: #006600; }
+    .sideAdmin > ul > li:nth-child(5n+4) ul > li:hover:nth-child(7n+4) > div div {
+      background-color: #008800; }
+    .sideAdmin > ul > li:nth-child(5n+4) ul > li:hover:nth-child(7n+5) > div div {
+      background-color: #006600; }
+    .sideAdmin > ul > li:nth-child(5n+4) ul > li:hover:nth-child(7n+6) > div div {
+      background-color: #004D00; }
+    .sideAdmin > ul > li:nth-child(5n+4) ul > li:hover:nth-child(7n+7) > div div {
+      background-color: #003300; }
+    .sideAdmin > ul > li:nth-child(5n+5) ul > li:hover:nth-child(7n+1) > div div {
+      background-color: #994D00; }
+    .sideAdmin > ul > li:nth-child(5n+5) ul > li:hover:nth-child(7n+2) > div div {
+      background-color: #B35900; }
+    .sideAdmin > ul > li:nth-child(5n+5) ul > li:hover:nth-child(7n+3) > div div {
+      background-color: #CC6600; }
+    .sideAdmin > ul > li:nth-child(5n+5) ul > li:hover:nth-child(7n+4) > div div {
+      background-color: #E67300; }
+    .sideAdmin > ul > li:nth-child(5n+5) ul > li:hover:nth-child(7n+5) > div div {
+      background-color: #CC6600; }
+    .sideAdmin > ul > li:nth-child(5n+5) ul > li:hover:nth-child(7n+6) > div div {
+      background-color: #B35900; }
+    .sideAdmin > ul > li:nth-child(5n+5) ul > li:hover:nth-child(7n+7) > div div {
+      background-color: #994D00; }
+
+.formLogin {
+  background-color: #AAA; }
+  .formLogin form {
+    display: table;
+    position: relative;
+    top: 15%;
+    margin: 0 auto;
+    width: 320px;
+    background-color: #777;
+    font-family: 'OpenSans';
+    color: #FFF;
+    border-radius: 5px; }
+    .formLogin form legend {
+      background-color: #555;
+      width: 90%;
+      font-size: 20px;
+      font-weight: bold;
+      padding: 10px 5%;
+      text-align: center;
+      margin: 0 0 15px;
+      border-radius: 5px; }
+    .formLogin form label {
+      width: 100%;
+      text-align: center;
+      padding: 5px 0;
+      display: block; }
+    .formLogin form input[type="text"], .formLogin form input[type="password"] {
+      width: 80%;
+      margin: 0 auto;
+      display: block;
+      padding: 5px 5%;
+      background-color: #333;
+      color: #FFF;
+      border: none;
+      font-family: 'OpenSans'; }
+    .formLogin form input[type="submit"] {
+      width: 80%;
+      margin: 0 auto;
+      display: block;
+      background-color: #222;
+      padding: 10px 0;
+      font-family: 'OpenSans';
+      border: none;
+      margin: 35px auto;
+      color: #FFF; }
+
+.contentAdmin {
+  width: 75%;
+  float: right;
+  height: 800px;
+  display: table;
+  background-color: #FFF;
+  font-family: 'OpenSans'; }
+  .contentAdmin > h1 {
+    background-color: #222;
+    padding: 36px 20px;
+    color: #FFF; }
+  .contentAdmin > section {
+    margin: 10px 1%;
+    padding: 10px 2%;
+    background-color: #FFF;
+    width: 94%;
+    height: 500px; }
+  .contentAdmin > form, .contentAdmin .cadcat {
+    width: 75%;
+    margin: 0 auto;
+    display: table;
+    max-width: 800px; }
+    .contentAdmin > form label, .contentAdmin .cadcat label {
+      width: 100%;
+      display: block;
+      font-size: 20px;
+      margin: 10px 0; }
+    .contentAdmin > form select, .contentAdmin > form input, .contentAdmin .cadcat select, .contentAdmin .cadcat input {
+      display: block;
+      background-color: #CCC;
+      color: #111;
+      border: none;
+      font-size: 18px;
+      padding: 7px;
+      width: 70%;
+      float: left; }
+    .contentAdmin > form input[type="submit"], .contentAdmin .cadcat input[type="submit"] {
+      width: 200px;
+      float: right;
+      display: block;
+      background-color: #222;
+      border: none;
+      color: #FFF;
+      padding: 10px 15px;
+      font-size: 15px;
+      cursor: pointer; }
+
+.erro, .cadpost, .cadpage, .cadcat, .caduser, .listarPubs, .listarCat, .listarUser {
+  display: table;
+  width: 75%;
+  max-width: 800px;
+  margin: 40px auto; }
+  .erro .error, .cadpost .error, .cadpage .error, .cadcat .error, .caduser .error, .listarPubs .error, .listarCat .error, .listarUser .error {
+    background-color: #EAA;
+    color: #955;
+    border: none;
+    padding: 30px 20px; }
+  .erro .ok, .cadpost .ok, .cadpage .ok, .cadcat .ok, .caduser .ok, .listarPubs .ok, .listarCat .ok, .listarUser .ok {
+    background-color: #AEA;
+    color: #595;
+    border: none;
+    padding: 30px 20px; }
+
+.cadpost label, .cadpage label, .caduser label {
+  width: 100%;
+  padding: 5px 0;
+  display: block;
+  font-size: 20px;
+  color: #333;
+  clear: both; }
+.cadpost input[type="text"], .cadpost select, .cadpage input[type="text"], .cadpage select, .caduser input[type="text"], .caduser select {
+  width: 100%;
+  display: block;
+  background-color: #CCC;
+  color: #111;
+  border: none;
+  font-size: 18px;
+  padding: 7px;
+  clear: both; }
+.cadpost textarea, .cadpage textarea, .caduser textarea {
+  width: 100%;
+  display: block;
+  background-color: #CCC;
+  padding: 10px 15px;
+  color: #111;
+  border: none;
+  resize: none;
+  height: 300px;
+  font: 16px 'OpenSans'; }
+.cadpost input[type="submit"], .cadpage input[type="submit"], .caduser input[type="submit"] {
+  width: 150px;
+  float: right;
+  display: block;
+  background-color: #222;
+  border: none;
+  margin: 35px auto;
+  color: #FFF;
+  padding: 10px 15px;
+  cursor: pointer; }
+
+.cadpost input[type="text"]:nth-child(4) {
+  width: 80%;
+  float: left; }
+.cadpost input[type="file"] {
+  float: left;
+  text-decoration: none;
+  color: #FFF;
+  font-size: 12px;
+  display: block;
+  background-color: #222;
+  padding: 10px 15px; }
+
+.listarPubs, .listarCat, .listarUser {
+  display: table;
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #111; }
+  .listarPubs span, .listarCat span, .listarUser span {
+    width: 17.5%;
+    display: table;
+    float: left;
+    text-align: center; }
+  .listarPubs span:first-child, .listarCat span:first-child, .listarUser span:first-child {
+    width: 30%;
+    text-align: left; }
+  .listarPubs h1, .listarCat h1, .listarUser h1 {
+    display: table;
+    width: 100%;
+    font-weight: normal;
+    background-color: #111;
+    margin: 15px 0 0; }
+  .listarPubs div, .listarCat div, .listarUser div {
+    display: table;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-bottom: 2px solid #888;
+    padding: 10px 15px 5px; }
+    .listarPubs div > span, .listarCat div > span, .listarUser div > span {
+      padding: 6px 0; }
+    .listarPubs div form, .listarCat div form, .listarUser div form {
+      display: block;
+      width: 17.5%;
+      float: left;
+      margin: 0;
+      cursor: pointer; }
+      .listarPubs div form input[type="submit"], .listarCat div form input[type="submit"], .listarUser div form input[type="submit"] {
+        margin: 0 auto;
+        display: block;
+        float: none;
+        border: none;
+        cursor: pointer; }
+
+.listarPubs div form:nth-child(4) input[type="submit"] {
+  background: url("../img/edit.png") center center no-repeat;
+  width: 30px;
+  height: 30px; }
+.listarPubs div form:nth-child(4) input[type="submit"]:hover {
+  border: 2px solid #FFF;
+  border-radius: 17px; }
+.listarPubs div form:nth-child(5) input[type="submit"] {
+  background: url("../img/del.png") center center no-repeat;
+  width: 30px;
+  height: 30px; }
+.listarPubs div form:nth-child(5) input[type="submit"]:hover {
+  border: 2px solid #FFF;
+  border-radius: 17px; }
+.listarPubs div:hover {
+  background-color: #666;
+  transition: 0.3s;
+  color: #FFF; }
+  .listarPubs div:hover form:nth-child(4) input[type="submit"] {
+    background: url("../img/editB.png") center center no-repeat; }
+  .listarPubs div:hover form:nth-child(5) input[type="submit"] {
+    background: url("../img/delB.png") center center no-repeat; }
+
+.listarCat span:first-child {
+  width: 65%; }
+.listarCat div form:nth-child(2) input[type="submit"] {
+  background: url("../img/edit.png") center center no-repeat;
+  width: 30px;
+  height: 30px; }
+.listarCat div form:nth-child(2) input[type="submit"]:hover {
+  border: 2px solid #FFF;
+  border-radius: 17px; }
+.listarCat div form:nth-child(3) input[type="submit"] {
+  background: url("../img/del.png") center center no-repeat;
+  width: 30px;
+  height: 30px; }
+.listarCat div form:nth-child(3) input[type="submit"]:hover {
+  border: 2px solid #FFF;
+  border-radius: 17px; }
+.listarCat div:hover {
+  background-color: #666;
+  transition: 0.3s;
+  color: #FFF; }
+  .listarCat div:hover form:nth-child(2) input[type="submit"] {
+    background: url("../img/editB.png") center center no-repeat; }
+  .listarCat div:hover form:nth-child(3) input[type="submit"] {
+    background: url("../img/delB.png") center center no-repeat; }
+
+.listarUser span:first-child {
+  width: 47.5%; }
+.listarUser div form:nth-child(3) input[type="submit"] {
+  background: url("../img/edit.png") center center no-repeat;
+  width: 30px;
+  height: 30px; }
+.listarUser div form:nth-child(3) input[type="submit"]:hover {
+  border: 2px solid #FFF;
+  border-radius: 17px; }
+.listarUser div form:nth-child(4) input[type="submit"] {
+  background: url("../img/del.png") center center no-repeat;
+  width: 30px;
+  height: 30px; }
+.listarUser div form:nth-child(4) input[type="submit"]:hover {
+  border: 2px solid #FFF;
+  border-radius: 17px; }
+.listarUser div:hover {
+  background-color: #666;
+  transition: 0.3s;
+  color: #FFF; }
+  .listarUser div:hover form:nth-child(3) input[type="submit"] {
+    background: url("../img/editB.png") center center no-repeat; }
+  .listarUser div:hover form:nth-child(4) input[type="submit"] {
+    background: url("../img/delB.png") center center no-repeat; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,4 +1,5 @@
 <article class="cont-carrossel">
+	<h1>Destaque</h1>
 	<div class="box-carrossel">
         <div class="nav back"><p>&laquo;</p></div>
         <ul class="carrossel">
@@ -33,6 +34,7 @@ $limite = '3,5';
 			<a href="single.php?topico=<?php echo $id;?>">
 	            <li class="item"><img src="<?php echo $path.$categoria.'/'.$thumb?>" alt="<?php echo $titulo;?>" title="<?php echo $titulo;?>"/>
 	            	<h1><?php echo $titulo;?></h1>
+	            	<div></div>
 	            </li>
 	        </a>
 

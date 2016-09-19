@@ -26,7 +26,7 @@
                     $thumb_meta = $res_resultado[0];
                     $categoria_meta = $res_resultado[1];
 
-                    chdir("uploads/$categoria_meta");
+                    chdir("../uploads/$categoria_meta");
                     $del = unlink("$thumb_meta");
 
                     $deletar = "DELETE FROM tb_publicacao WHERE id = '$id'";
@@ -68,7 +68,7 @@
                 }
             }
 
-            $pasta = "uploads/$categoria_nome";
+            $pasta = "../uploads/$categoria_nome";
             $permitido = array('image/jpg', 'image/jpeg', 'image/pjpeg');
 
             require("funcao_upload.php");
@@ -185,7 +185,7 @@
                 $nome = $img['name'];
                 $tmp = $img['tmp_name'];
                 $type = $img['type'];
-                $pasta = "uploads/$categoria_nome";
+                $pasta = "../uploads/$categoria_nome";
                 $permitido = array('image/jpg', 'image/jpeg', 'image/pjpeg');
 
                 if(!empty($nome) && in_array($type, $permitido)){
@@ -204,7 +204,7 @@
                     while ($res_resultado_img=mysqli_fetch_array($resultado_img)) {
                         $thumb_meta = $res_resultado_img[0];
 
-                        $del = unlink("uploads/".$categoria_nome."/".$thumb_meta);
+                        $del = unlink("../uploads/".$categoria_nome."/".$thumb_meta);
                     }
                 }
 
